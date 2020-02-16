@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>DC APP</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <img src="./img/bar.png" alt="bar" class="menu">
+            Durham College
+        </header>
+
+        <aside>
+            <h3>Choose a Spot</h3>
+            <p>A. spot1</p>
+            <p>B. spot2</p>
+            <p>C. spot3</p>
+            <p>D. spot4</p>
+            <p>E. spot5</p>
+            <p>F. spot6</p>
+            <p>G. spot7</p>
+            <p>H. spot8</p>
+            <p>I. spot9</p>
+            <p>J. spot10</p>
+            <p>K. spot11</p>
+            <p>L. spot12</p>
+            <p>M. spot13</p>
+        </aside>
+
+        <main>
+            <section class="locationContainer" id="googleMap">
+                
+            </section>
+
+            <section class="mapContainer">
+                <img src="./img/map.png" alt="map" class="staticMap">
+            </section>
+
+            <section class="aboutContainer">
+                <h3>Lakeview Park History</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum at suscipit modi velit, voluptatibus
+                    itaque voluptas veritatis. In ullam ipsa, officiis modi, nulla laborum numquam vero laboriosam
+                    sapiente mollitia veritatis!</p>
+            </section>
+        </main>
+
+
+        <nav>
+            <div class="nav1 nav" num=0>
+                <i class="place nav_icon material-icons">place</i>
+                <p>Location</p>
+            </div>
+            <div class="nav2 nav" num=1>
+                <i class="map nav_icon material-icons">map</i>
+                <p>Map</p>
+            </div>
+            <div class="nav3 nav" num=2>
+                <i class="about nav_icon material-icons">book</i>
+                <p>About</p>
+            </div>
+        </nav>
+    </div>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrn2E13LT6V_YzkTRMTJnsVdVlpSb7tiA&callback=initMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./jquery.easing.1.3.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
