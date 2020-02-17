@@ -59,14 +59,14 @@ function initMap(){
     });
 
     if (navigator.geolocation) {
-        setInterval(function(){
+        // setInterval(function(){
             
-            navigator.geolocation.getCurrentPosition(function(position) {
+            navigator.geolocation.watchPosition(function(position) {
                 pos = {
                   lat: position.coords.latitude,
                   lng: position.coords.longitude
                 };
-                console.log(pos);
+                console.log(pos,position);
                 
                 marker2.position = {
                     lat:pos.lat,
@@ -82,7 +82,7 @@ function initMap(){
                 });
               });
             
-        },1000);
+        // },1000);
 
 
 
