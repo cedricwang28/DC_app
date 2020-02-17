@@ -50,23 +50,55 @@ function initMap(){
     });
 
 
-
+    let pos = {};
+    let marker2 = new google.maps.Marker({
+        position:{
+            lat:43.958772,lng: -78.903778
+        },
+        map:map
+    });
 
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
+        setInterval(function(){
+            
+            navigator.geolocation.getCurrentPosition(function(position) {
+                pos = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+                console.log(pos);
+                
+                marker2.position = {
+                    lat:pos.lat,
+                    lng:pos.lng
+                }
 
-          let marker2 = new google.maps.Marker({
-            position:{
-                lat:pos.lat,lng: pos.lng
-            },
-            map:map
-        });
+                new google.maps.Marker({
+                    position:{
+                        lat:pos.lat,
+                        lng:pos.lng
+                    },
+                    map:map
+                });
+              });
+            
+        },1000);
 
-        });
+
+
+        
+
+        // navigator.geolocation.getCurrentPosition(function(position) {
+        //   var pos = {
+        //     lat: position.coords.latitude,
+        //     lng: position.coords.longitude
+        //   };
+
+          
+        // });
+
+
+
       }
     
 
