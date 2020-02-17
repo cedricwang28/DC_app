@@ -33,14 +33,15 @@ $(function(){
 });
 
 
-
+let map, infoWindow;
 
 function initMap(){
     let options = {
         zoom:18,
         center:{lat:43.958172,lng: -78.903278}
     }
-    let map = new google.maps.Map(document.getElementById('googleMap'),options);
+    map = new google.maps.Map(document.getElementById('googleMap'),options);
+    infoWindow = new google.maps.InfoWindow;
 
     let marker = new google.maps.Marker({
         position:{
@@ -59,7 +60,6 @@ function initMap(){
     // });
 
     if (navigator.geolocation) {
-        // setInterval(function(){
             
             navigator.geolocation.watchPosition(function(position) {
                 pos = {
@@ -68,10 +68,7 @@ function initMap(){
                 };
                 console.log(pos,position);
                 
-                // marker2.position = {
-                //     lat:pos.lat,
-                //     lng:pos.lng
-                // }
+                map.setCenter(pos);
 
                 new google.maps.Marker({
                     position:{
@@ -80,29 +77,27 @@ function initMap(){
                     },
                     map:map
                 });
-              });
-            
-        // },1000);
+              }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+              },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
 
 
 
+      }else {
         
-
-        // navigator.geolocation.getCurrentPosition(function(position) {
-        //   var pos = {
-        //     lat: position.coords.latitude,
-        //     lng: position.coords.longitude
-        //   };
-
-          
-        // });
-
-
-
+        handleLocationError(false, infoWindow, map.getCenter());
       }
     
 
 }
 
 
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+                          'Error: The Geolocation service failed.' :
+                          'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+}
 
