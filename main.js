@@ -51,12 +51,12 @@ function initMap(){
 
 
     let pos = {};
-    let marker2 = new google.maps.Marker({
-        position:{
-            lat:43.958772,lng: -78.903778
-        },
-        map:map
-    });
+    // let marker2 = new google.maps.Marker({
+    //     position:{
+    //         lat:43.958772,lng: -78.903778
+    //     },
+    //     map:map
+    // });
 
     if (navigator.geolocation) {
         // setInterval(function(){
@@ -68,10 +68,10 @@ function initMap(){
                 };
                 console.log(pos,position);
                 
-                marker2.position = {
-                    lat:pos.lat,
-                    lng:pos.lng
-                }
+                // marker2.position = {
+                //     lat:pos.lat,
+                //     lng:pos.lng
+                // }
 
                 new google.maps.Marker({
                     position:{
