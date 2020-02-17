@@ -33,9 +33,11 @@ $(function(){
 });
 
 
-let map, infoWindow;
+let map, infoWindow, myPoint;
+
 
 function initMap(){
+
     let options = {
         zoom:18,
         center:{lat:43.958172,lng: -78.903278}
@@ -43,14 +45,15 @@ function initMap(){
     map = new google.maps.Map(document.getElementById('googleMap'),options);
     infoWindow = new google.maps.InfoWindow;
 
+    myPoint = new google.maps.Marker({
+        position:{
+            lat:43.958772,lng: -78.903778
+        },
+        map:map
+    });
+
 
     let pos = {};
-    // let marker2 = new google.maps.Marker({
-    //     position:{
-    //         lat:43.958772,lng: -78.903778
-    //     },
-    //     map:map
-    // });
 
     if (navigator.geolocation) {
             
@@ -63,13 +66,15 @@ function initMap(){
                 
                 map.setCenter(pos);
 
-                new google.maps.Marker({
-                    position:{
-                        lat:pos.lat,
-                        lng:pos.lng
-                    },
-                    map:map
-                });
+                // new google.maps.Marker({
+                //     position:{
+                //         lat:pos.lat,
+                //         lng:pos.lng
+                //     },
+                //     map:map
+                // });
+                myPoint.position = pos;
+
               }, function() {
                 handleLocationError(true, infoWindow, map.getCenter());
               },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
