@@ -43,13 +43,6 @@ function initMap(){
     map = new google.maps.Map(document.getElementById('googleMap'),options);
     infoWindow = new google.maps.InfoWindow;
 
-    let marker = new google.maps.Marker({
-        position:{
-            lat:43.958172,lng: -78.903278
-        },
-        map:map
-    });
-
 
     let pos = {};
     // let marker2 = new google.maps.Marker({
