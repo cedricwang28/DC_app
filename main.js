@@ -64,7 +64,7 @@ function initMap(){
                         map:map
                     });
                 }else{
-                    myPoint.position = pos;
+                    myPoint.setPosition(pos);
                 }
                 
                 
