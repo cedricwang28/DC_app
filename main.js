@@ -45,12 +45,6 @@ function initMap(){
     map = new google.maps.Map(document.getElementById('googleMap'),options);
     infoWindow = new google.maps.InfoWindow;
 
-    myPoint = new google.maps.Marker({
-        position:{
-            lat:43.958772,lng: -78.903778
-        },
-        map:map
-    });
 
 
     let pos = {};
@@ -63,6 +57,16 @@ function initMap(){
                   lng: position.coords.longitude
                 };
                 console.log(pos,position);
+
+                if(myPoint == undefined){
+                    myPoint = new google.maps.Marker({
+                        position:pos,
+                        map:map
+                    });
+                }else{
+                    myPoint.position = pos;
+                }
+                
                 
                 map.setCenter(pos);
 
@@ -73,7 +77,7 @@ function initMap(){
                 //     },
                 //     map:map
                 // });
-                myPoint.position = pos;
+                
 
               }, function() {
                 handleLocationError(true, infoWindow, map.getCenter());
