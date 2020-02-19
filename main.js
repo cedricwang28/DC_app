@@ -61,7 +61,8 @@ function initMap(){
                 if(myPoint == undefined){
                     myPoint = new google.maps.Marker({
                         position:pos,
-                        map:map
+                        map:map,
+                        icon:`img/person.png`
                     });
                 }else{
                     myPoint.setPosition(pos);
