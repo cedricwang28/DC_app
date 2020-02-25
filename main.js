@@ -58,8 +58,9 @@ function initMap(){
                   lng: position.coords.longitude
                 };
                 console.log(position);
-                console.log(position.coords.heading);
-                alert(position.coords.heading);
+                
+                
+                document.querySelector('.showheading').innerHTML = position.coords.heading;
 
                 if(myPoint == undefined){
                     myPoint = new google.maps.Marker({
