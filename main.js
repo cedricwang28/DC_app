@@ -33,6 +33,7 @@ $(function(){
 });
 
 
+
 let map, infoWindow, myPoint;
 
 
@@ -56,7 +57,9 @@ function initMap(){
                   lat: position.coords.latitude,
                   lng: position.coords.longitude
                 };
-                console.log(pos,position);
+                console.log(position);
+                console.log(position.coords.heading);
+                alert(position.coords.heading);
 
                 if(myPoint == undefined){
                     myPoint = new google.maps.Marker({

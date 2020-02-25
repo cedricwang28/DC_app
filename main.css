@@ -103,3 +103,13 @@ nav div p{
 .nav1{
     color: #406aab;
 }
+
+.showheading{
+    position: absolute;
+    right: 2vw;
+    top: 1vh;
+    width: 70px;
+    height: 30px;
+    background-color: yellow;
+    z-index: 20;
+}
