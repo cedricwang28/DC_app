@@ -61,6 +61,7 @@ function initMap(){
                 
                 
                 document.querySelector('.showheading').innerHTML = position.coords.heading;
+                document.querySelector('.showalt').innerHTML = position.coords.altitude;
 
                 if(myPoint == undefined){
                     myPoint = new google.maps.Marker({
