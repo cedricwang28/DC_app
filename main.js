@@ -60,7 +60,7 @@ function initMap(){
                 console.log(position);
                 
                 
-                document.querySelector('.showheading').innerHTML = position.coords.heading;
+                document.querySelector('.showalt').innerHTML = position.coords.altitude;
                 document.querySelector('.showalt').innerHTML = position.coords.altitude;
 
                 if(myPoint == undefined){
