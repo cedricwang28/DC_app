@@ -113,12 +113,3 @@ nav div p{
     background-color: yellow;
     z-index: 20;
 }
-.showalt{
-    position: absolute;
-    left: 8vw;
-    top: 1vh;
-    width: 70px;
-    height: 30px;
-    background-color: yellow;
-    z-index: 20;
-}
