@@ -356,6 +356,7 @@ function initMap() {
     });
 
 
+
     let bigPath1 = new google.maps.Polyline({
         path: [
             new google.maps.LatLng(43.861820,-78.834804),
@@ -521,6 +522,66 @@ function initMap() {
         map:map
     });
 
+    let shortPath2 = new google.maps.Polyline({
+        path: [
+            new google.maps.LatLng(43.863233,-78.830401),
+            new google.maps.LatLng(43.863079,-78.830326),
+            
+            
+        ],
+        strokeColor:"white",
+        strokeWeight:3,
+        map:map
+    });
+
+    let shortPath1_Parking3 = new google.maps.Polyline({
+        path: [
+            new google.maps.LatLng(43.862893,-78.830853),
+            new google.maps.LatLng(43.862800,-78.830810),
+            
+            
+        ],
+        strokeColor:"white",
+        strokeWeight:3,
+        map:map
+    });
+
+    let shortPath2_Parking3 = new google.maps.Polyline({
+        path: [
+            new google.maps.LatLng(43.863179,-78.829758),
+            new google.maps.LatLng(43.863070,-78.829706),
+            
+            
+        ],
+        strokeColor:"white",
+        strokeWeight:3,
+        map:map
+    });
+
+    let shortPath1_Parking4 = new google.maps.Polyline({
+        path: [
+            new google.maps.LatLng(43.864855,-78.829356),
+            new google.maps.LatLng(43.864862,-78.829191),
+            
+            
+        ],
+        strokeColor:"white",
+        strokeWeight:3,
+        map:map
+    });
+
+    let shortPath2_Parking4 = new google.maps.Polyline({
+        path: [
+            new google.maps.LatLng(43.864835,-78.828265),
+            new google.maps.LatLng(43.865047,-78.828043),
+            
+            
+        ],
+        strokeColor:"white",
+        strokeWeight:3,
+        map:map
+    });
+
 
 
 
@@ -590,6 +651,82 @@ function initMap() {
         },
         map: map
     });
+
+
+    let parking1 = new google.maps.Polygon({
+        path: [
+            new google.maps.LatLng(43.863841,-78.830874),
+            new google.maps.LatLng(43.863899,-78.830624),
+            new google.maps.LatLng(43.863265,-78.830318),
+            new google.maps.LatLng(43.863206,-78.830572)
+        ],
+        strokeColor:"grey",
+        strokeWeight:2,
+        fillColor:"grey",
+        fillOpacity:1,
+        map:map
+    });
+
+    let parking2 = new google.maps.Polygon({
+        path: [
+            new google.maps.LatLng(43.862024,-78.831996),
+            new google.maps.LatLng(43.862069,-78.831767),
+            new google.maps.LatLng(43.861301,-78.831474),
+            new google.maps.LatLng(43.861250,-78.831666)
+        ],
+        strokeColor:"grey",
+        strokeWeight:2,
+        fillColor:"grey",
+        fillOpacity:1,
+        map:map
+    });
+
+    let parking3 = new google.maps.Polygon({
+        path: [
+            new google.maps.LatLng(43.862793,-78.830814),
+            new google.maps.LatLng(43.863068,-78.829705),
+            new google.maps.LatLng(43.862860,-78.829607),
+            new google.maps.LatLng(43.862583,-78.830719)
+        ],
+        strokeColor:"grey",
+        strokeWeight:3,
+        fillColor:"grey",
+        fillOpacity:1,
+        map:map
+    });
+
+    let parking4 = new google.maps.Polygon({
+        path: [
+            new google.maps.LatLng(43.865230,-78.829010),
+            new google.maps.LatLng(43.865093,-78.829150),
+            new google.maps.LatLng(43.864863,-78.829185),
+            new google.maps.LatLng(43.864536,-78.828576),
+            new google.maps.LatLng(43.864834,-78.828270)
+        ],
+        strokeColor:"grey",
+        strokeWeight:3,
+        fillColor:"grey",
+        fillOpacity:1,
+        map:map
+    });
+
+    let parking5 = new google.maps.Polygon({
+        path: [
+            new google.maps.LatLng(43.864918,-78.825795),
+            new google.maps.LatLng(43.864717,-78.825540),
+            new google.maps.LatLng(43.865167,-78.824861),
+            new google.maps.LatLng(43.865393,-78.825055)
+        ],
+        strokeColor:"grey",
+        strokeWeight:3,
+        fillColor:"grey",
+        fillOpacity:1,
+        map:map
+    });
+
+
+
+
 
 
 
