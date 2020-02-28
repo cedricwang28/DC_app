@@ -524,6 +524,73 @@ function initMap() {
 
 
 
+    let guyHouse = new google.maps.Marker({
+        position: {
+            lat: 43.863951,
+            lng: -78.826918
+        },
+        icon:{url:`img/guyHouse.svg`, 
+              scaledSize: new google.maps.Size(30, 30),
+              title: 'Guy House'
+        },
+        map: map
+    });
+
+    let henryHouse = new google.maps.Marker({
+        position: {
+            lat: 43.863951,
+            lng: -78.827637
+        },
+        icon:{url:`img/henryHouse.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let robinsonHouse = new google.maps.Marker({
+        position: {
+            lat: 43.864535,
+            lng: -78.827010
+        },
+        icon:{url:`img/robinsonHouse.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let restRoom1 = new google.maps.Marker({
+        position: {
+            lat: 43.864005,
+            lng: -78.830663
+        },
+        icon:{url:`img/restroom-solid.svg`, 
+              scaledSize: new google.maps.Size(25, 25)
+        },
+        map: map
+    });
+
+    let restRoom2 = new google.maps.Marker({
+        position: {
+            lat: 43.863150,
+            lng: -78.828936
+        },
+        icon:{url:`img/restroom-solid.svg`, 
+              scaledSize: new google.maps.Size(25, 25)
+        },
+        map: map
+    });
+
+    let restRoom3 = new google.maps.Marker({
+        position: {
+            lat: 43.864604,
+            lng: -78.825900
+        },
+        icon:{url:`img/restroom-solid.svg`, 
+              scaledSize: new google.maps.Size(25, 25)
+        },
+        map: map
+    });
+
 
 
     let boundaryLeft = new google.maps.Polyline({
