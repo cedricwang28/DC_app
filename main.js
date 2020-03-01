@@ -798,7 +798,7 @@ function initMap() {
                 console.log(position);
 
 
-                document.querySelector('.showheading').innerHTML = position.coords.heading;
+                document.querySelector('.showheading').innerHTML = map.getHeading();
                 console.log(map.getHeading());
                 
 
