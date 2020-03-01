@@ -798,19 +798,30 @@ function initMap() {
                 console.log(position);
 
 
-                document.querySelector('.showheading').innerHTML = map.getHeading();
-                console.log(map.getHeading());
+                document.querySelector('.showheading').innerHTML = position.coords.heading;
                 
 
                 if(myPoint == undefined){
                     myPoint = new google.maps.Marker({
                         position:pos,
                         map:map,
-                        icon:`img/person.png`
+                        icon:{path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                            scale: 6,
+                            fillColor: "red",
+                            rotation: 90,
+                            scaledSize: new google.maps.Size(100, 100)
+                        }
                     });
                 }else{
                     myPoint.setPosition(pos);
+                    myPoint.setIcon({
+                        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                        scale: 6,
+                        rotation: heading,
+                        scaledSize: new google.maps.Size(35, 35),
+                      });
                 }
+
 
 
                 map.setCenter(pos);
