@@ -816,8 +816,8 @@ function initMap() {
                     myPoint.setPosition(pos);
                     myPoint.setIcon({
                         path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                        scale: 6,
-                        rotation: heading,
+                        scale: 8,
+                        rotation: position.coords.heading,
                         scaledSize: new google.maps.Size(35, 35),
                       });
                 }
