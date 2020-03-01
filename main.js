@@ -49,7 +49,7 @@ function initMap() {
             lat: 43.863194,
             lng: -78.828056
         },
-        mapTypeId: 'roadmap',
+        mapTypeId: 'hybrid',
         styles: [
             {
                 "featureType": "all",
@@ -786,52 +786,54 @@ function initMap() {
 
 
 
-    // let pos = {};
+    let pos = {};
 
-    // if (navigator.geolocation) {
+    if (navigator.geolocation) {
 
-    //         navigator.geolocation.watchPosition(function(position) {
-    //             pos = {
-    //               lat: position.coords.latitude,
-    //               lng: position.coords.longitude
-    //             };
-    //             console.log(position);
-
-
-    //             document.querySelector('.showheading').innerHTML = position.coords.heading;
-
-    //             if(myPoint == undefined){
-    //                 myPoint = new google.maps.Marker({
-    //                     position:pos,
-    //                     map:map,
-    //                     icon:`img/person.png`
-    //                 });
-    //             }else{
-    //                 myPoint.setPosition(pos);
-    //             }
+            navigator.geolocation.watchPosition(function(position) {
+                pos = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+                console.log(position);
 
 
-    //             map.setCenter(pos);
+                document.querySelector('.showheading').innerHTML = position.coords.heading;
+                console.log(map.getHeading());
+                
 
-    //             // new google.maps.Marker({
-    //             //     position:{
-    //             //         lat:pos.lat,
-    //             //         lng:pos.lng
-    //             //     },
-    //             //     map:map
-    //             // });
-
-
-    //           }, function() {
-    //             handleLocationError(true, infoWindow, map.getCenter());
-    //           },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
-
+                if(myPoint == undefined){
+                    myPoint = new google.maps.Marker({
+                        position:pos,
+                        map:map,
+                        icon:`img/person.png`
+                    });
+                }else{
+                    myPoint.setPosition(pos);
+                }
 
 
-    //   }else {
+                map.setCenter(pos);
 
-    //     handleLocationError(false, infoWindow, map.getCenter());
-    //   }
+                // new google.maps.Marker({
+                //     position:{
+                //         lat:pos.lat,
+                //         lng:pos.lng
+                //     },
+                //     map:map
+                // });
+
+
+              }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+              },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
+
+
+
+      }else {
+
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
 
 
 }
