@@ -45,10 +45,10 @@ function initMap() {
 
     let options = {
         zoom: 16,
-        center: {
-            lat: 43.863194,
-            lng: -78.828056
-        },
+        // center: {
+        //     lat: 43.863194,
+        //     lng: -78.828056
+        // },
         mapTypeId: 'hybrid',
         styles: [
             {
@@ -798,10 +798,11 @@ function initMap() {
                 console.log(position);
 
 
-                document.querySelector('.showheading').innerHTML = position.coords.heading;
+                // document.querySelector('.showheading').innerHTML = position.coords.heading;
                 
 
                 if(myPoint == undefined){
+                    map.setCenter(pos);
                     myPoint = new google.maps.Marker({
                         position:pos,
                         map:map,
@@ -817,14 +818,13 @@ function initMap() {
                     myPoint.setIcon({
                         path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
                         scale: 8,
-                        rotation: position.coords.heading,
-                        scaledSize: new google.maps.Size(35, 35),
+                        rotation: position.coords.heading
                       });
                 }
 
 
 
-                map.setCenter(pos);
+                // map.setCenter(pos);
 
                 // new google.maps.Marker({
                 //     position:{
