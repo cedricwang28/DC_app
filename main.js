@@ -49,7 +49,7 @@ function initMap() {
         //     lat: 43.863194,
         //     lng: -78.828056
         // },
-        mapTypeId: 'hybrid',
+        mapTypeId: 'roadmap',
         styles: [
             {
                 "featureType": "all",
@@ -817,7 +817,7 @@ function initMap() {
                     myPoint.setPosition(pos);
                     myPoint.setIcon({
                         path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                        scale: 8,
+                        scale: 6,
                         rotation: position.coords.heading
                       });
                 }
