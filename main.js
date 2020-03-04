@@ -808,7 +808,8 @@ function initMap() {
                     myPoint = new google.maps.Marker({
                         position:pos,
                         map:map,
-                        icon:{path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                        icon:{
+                            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
                             scale: 6,
                             fillColor: "red",
                             rotation: 90,
@@ -818,6 +819,8 @@ function initMap() {
                 }else{
                     myPoint.setPosition(pos);
                     myPoint.setIcon({
+                        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                        scale: 5,
                         rotation: heading
                       });
                 }
