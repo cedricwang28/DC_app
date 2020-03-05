@@ -787,7 +787,6 @@ function initMap() {
 
 
     let pos = {};
-    let heading;
 
     if (navigator.geolocation) {
 
@@ -796,7 +795,6 @@ function initMap() {
                   lat: position.coords.latitude,
                   lng: position.coords.longitude
                 };
-                heading = position.coords.heading
                 console.log(position);
 
 
@@ -808,8 +806,7 @@ function initMap() {
                     myPoint = new google.maps.Marker({
                         position:pos,
                         map:map,
-                        icon:{
-                            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                        icon:{path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
                             scale: 6,
                             fillColor: "red",
                             rotation: 90,
@@ -820,8 +817,8 @@ function initMap() {
                     myPoint.setPosition(pos);
                     myPoint.setIcon({
                         path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                        scale: 5,
-                        rotation: heading
+                        scale: 6,
+                        rotation: position.coords.heading
                       });
                 }
 
