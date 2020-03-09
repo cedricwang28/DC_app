@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024.55 394.55">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 0.55px;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="459.23" y1="0.55" x2="627.37" y2="624.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dfeff2"/>
+      <stop offset="0.09" stop-color="#d6ebef"/>
+      <stop offset="0.43" stop-color="#b9dce3"/>
+      <stop offset="0.62" stop-color="#aed6df"/>
+    </linearGradient>
+  </defs>
+  <title>Asset 1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="background">
+      <rect id="sky" class="cls-1" x="0.28" y="0.28" width="1024" height="394"/>
+    </g>
+  </g>
+</svg>

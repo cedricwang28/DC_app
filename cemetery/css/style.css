@@ -1,0 +1,218 @@
+/*
+    for svg: preserve aspect ratio: none;
+
+    color pallet: 
+        green: #9ba97d
+        blue: #8dadb5
+        soil grey: #c1beb8
+        soil red: #9f3a1c
+*/
+
+
+/* hide show with animation */
+
+.hide {
+    display: none;
+}
+
+.animated {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    display: block;
+}
+
+.to-animate-in {
+    display: block;
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+
+main {
+    text-align: center;
+    background-color: #aed6df;
+}
+
+
+/* intro */
+
+#intro {
+    height: 100vh;
+    background-image: url(../img/sky.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#intro * {
+    font-family: itc-galliard, serif;
+    font-weight: 900;
+    font-style: normal;
+
+    /* text-shadow: 2px 2px 5px #9f3a1c; */
+
+    color: #9f3a1c;
+}
+
+#intro a img {
+    width: 8vw;
+    max-width: 50px;
+}
+
+
+
+/* grass */
+
+#grass {
+    position: relative;
+    top: 30vw;
+    height: 50vw;
+    background-image: url(../img/grass.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ground */
+
+#ground {
+    /* height: 5000px; */
+    background-image: url(../img/soil-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+
+/* skeleton */
+#skeleton {
+    /* position: relative; */
+    position: sticky;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    /* left: -37vw; */
+    margin-right: 65vw;
+    top: 30vh;
+    z-index: 101;
+
+}
+
+
+#ground section {
+    position: relative;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+}
+
+
+
+/* tunnel styles */
+.tunnel {
+    /* background-image: url(../img/tunnel.svg); */
+    margin-left: 5vw;
+    height: 100%;
+    width: 25vw;
+    z-index: 100;
+}
+
+
+
+#soil1 {
+    background-image: url(../img/soil1.svg);
+    /* top: -15vw; */
+    z-index: 96;
+}
+
+#soil2 {
+    background-image: url(../img/soil2.svg);
+    top: -10vh;
+    z-index: 97;
+}
+
+#soil3 {
+    background-image: url(../img/soil3.svg);
+    top: -20vh;
+    z-index: 98;
+}
+
+#soil4 {
+    background-image: url(../img/soil4.svg);
+    top: -30vh;
+    z-index: 98;
+}
+
+#soil5 {
+    background-image: url(../img/soil5.svg);
+    top: -40vh;
+    z-index: 98;
+}
+
+#soil6 {
+    background-image: url(../img/soil6.svg);
+    top: -50vh;
+    z-index: 99;
+}
+
+
+/* quiz div styling */
+#ground section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#ground section .content {
+    flex-grow: 2;
+}
+
+.quiz {
+    background-color: white;
+}
+
+.information {
+    background-color: white;
+}
+
+
+/* desktop */
+@media only screen and (min-width: 800px) {
+
+    /* tunnel styles */
+    .tunnel {
+        /* background-image: url(../img/tunnel.svg); */
+        margin-left: 5vw;
+        height: 100%;
+        width: 30vw;
+        z-index: 100;
+    }
+
+    /* skeleton */
+    #skeleton {
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px;
+        /* left: -37vw; */
+        margin-right: 60vw;
+
+    }
+
+
+}

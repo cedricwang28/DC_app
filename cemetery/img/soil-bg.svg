@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1656">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="506.55" y1="28.01" x2="517.54" y2="1641.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#976a4b"/>
+      <stop offset="0.31" stop-color="#624631"/>
+      <stop offset="0.78" stop-color="#392a1f"/>
+      <stop offset="1" stop-color="#1c160f"/>
+    </linearGradient>
+  </defs>
+  <title>Asset 9</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="background">
+      <rect id="soil-bg" class="cls-1" width="1024" height="1656"/>
+    </g>
+  </g>
+</svg>

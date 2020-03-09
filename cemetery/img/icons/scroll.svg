@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207 108.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #9ba97d;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+    </style>
+  </defs>
+  <title>Asset 2</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="background">
+      <polyline class="cls-1" points="3.5 3.5 103.5 103.5 203.5 3.5"/>
+    </g>
+  </g>
+</svg>

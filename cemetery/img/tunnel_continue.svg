@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.12 1636.37" preserveAspectRatio="none">>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #201710;
+      }
+    </style>
+  </defs>
+  <title>Asset 19</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="background">
+      <path id="tunnel" class="cls-1" d="M177,1636.37H3.2c-3.37,0-3.09-2-3.09-4.4V4.63c0-3-1-4.16,3.09-4.14C58.05.68,120.78-.59,175.11.35c4,.07,5-.83,5,2.16V1632C180.11,1634.4,180.38,1636.37,177,1636.37Z"/>
+    </g>
+  </g>
+</svg>

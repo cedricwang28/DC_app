@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 180.01 1636.24" preserveAspectRatio="none">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="81.07" y1="16.85" x2="82.5" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#936240"/>
+      <stop offset="0.14" stop-color="#8d5e3e"/>
+      <stop offset="0.32" stop-color="#7c5336"/>
+      <stop offset="0.53" stop-color="#60412b"/>
+      <stop offset="0.76" stop-color="#3a281b"/>
+      <stop offset="0.89" stop-color="#201710"/>
+    </linearGradient>
+  </defs>
+  <title>Asset 7</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="background">
+      <path id="tunnel" class="cls-1" d="M173.91,1636.24H6.09c-3.36,0-6.09-2-6.09-4.39V4.5C0,1.48,4.13-.62,8.1.36,62,13.75,116.61,13.33,172,.22c3.94-.93,8,1.17,8,4.17V1631.85C180,1634.28,177.28,1636.24,173.91,1636.24Z"/>
+    </g>
+  </g>
+</svg>
