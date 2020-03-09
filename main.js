@@ -883,10 +883,15 @@ function initMap() {
     });
 
 
-    
+
     robinsonHouse.addListener('click', function() {
         // window.open("./transportation/index.html");
         window.location.replace("./museumHouses/index.html");
+    });
+
+    tree.addListener('click', function() {
+        // window.open("./transportation/index.html");
+        window.location.replace("./indigenousHistory/index.html");
     });
 
 

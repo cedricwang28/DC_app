@@ -228,16 +228,12 @@ nav{
     color: #ffffff;
 }
 
-
-
-
-/* body{
-    position: relative;
-}
 .close_icon{
     position: fixed;
     width: 30px;
     height: 30px;
     left: 1.5vw;
     top: 2vh;
-} */
+    cursor: pointer;
+    opacity: 0;
+}
