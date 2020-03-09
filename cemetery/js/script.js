@@ -21,6 +21,14 @@ window.onload = function () {
     });
 
 
+
+
+    document.querySelector(".close_icon").addEventListener("click",function(){
+        
+        window.location.replace("../index.html");
+    });
+
+
 };
 
 

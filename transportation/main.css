@@ -10,7 +10,7 @@ body{
     position: fixed;
     width: 30px;
     height: 30px;
-    left: 1.5vw;
+    left: 2vw;
     top: 2vh;
 }
 .close_icon:hover{

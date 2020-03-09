@@ -905,6 +905,11 @@ function initMap() {
         window.location.replace("./indigenousHistory/index.html");
     });
 
+    grave.addListener('click', function() {
+        // window.open("./transportation/index.html");
+        window.location.replace("./cemetery/index.html");
+    });
+
 
 
 
