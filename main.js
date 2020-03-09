@@ -872,6 +872,22 @@ function initMap() {
         window.location.replace("./transportation/index.html");
     });
 
+    guyHouse.addListener('click', function() {
+        // window.open("./transportation/index.html");
+        window.location.replace("./museumHouses/index.html");
+    });
+
+    henryHouse.addListener('click', function() {
+        // window.open("./transportation/index.html");
+        window.location.replace("./museumHouses/index.html");
+    });
+
+    robinsonHouse.addListener('click', function() {
+        // window.open("./transportation/index.html");
+        window.location.replace("./museumHouses/index.html");
+    });
+
+
 
 
 
