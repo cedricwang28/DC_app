@@ -593,7 +593,7 @@ function initMap() {
             lng: -78.826918
         },
         icon:{url:`img/guyHouse.svg`, 
-              scaledSize: new google.maps.Size(30, 30),
+              scaledSize: new google.maps.Size(25, 25),
               title: 'Guy House'
         },
         map: map
@@ -676,12 +676,12 @@ function initMap() {
         map: map
     });
 
-    let tree = new google.maps.Marker({
+    let teepee = new google.maps.Marker({
         position: {
             lat: 43.861105,
             lng: -78.831072
         },
-        icon:{url:`img/tree.svg`, 
+        icon:{url:`img/teepee.svg`, 
               scaledSize: new google.maps.Size(30, 30)
         },
         map: map
@@ -716,6 +716,17 @@ function initMap() {
         },
         icon:{url:`img/gazebo.svg`, 
               scaledSize: new google.maps.Size(20, 20)
+        },
+        map: map
+    });
+
+    let fountain = new google.maps.Marker({
+        position: {
+            lat: 43.864125,
+            lng: -78.827179
+        },
+        icon:{url:`img/fountain.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
         },
         map: map
     });
@@ -889,7 +900,7 @@ function initMap() {
         window.location.replace("./museumHouses/index.html");
     });
 
-    tree.addListener('click', function() {
+    teepee.addListener('click', function() {
         // window.open("./transportation/index.html");
         window.location.replace("./indigenousHistory/index.html");
     });
@@ -902,20 +913,20 @@ function initMap() {
 
 
 
-    // let dest = new google.maps.MVCArray();
+    let dest = new google.maps.MVCArray();
 
 
-    // let boundary = new google.maps.Polyline({
-    //     path: dest,
-    //     strokeColor:"black",
-    //     map:map
-    // });
+    let boundary = new google.maps.Polyline({
+        path: dest,
+        strokeColor:"black",
+        map:map
+    });
    
-    // google.maps.event.addListener(map,'click',function(e){
-    //     boundary.getPath().push(e.latLng);
-    //     console.log(e.latLng.lat(),e.latLng.lng());
+    google.maps.event.addListener(map,'click',function(e){
+        boundary.getPath().push(e.latLng);
+        console.log(e.latLng.lat(),e.latLng.lng());
         
-    // });
+    });
 
 
 
