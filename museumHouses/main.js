@@ -2,6 +2,9 @@
 /* --------------------- variable declaration --------------------- */
 let body = document.querySelector("body");
 
+// close button
+let closeIcon = document.querySelector(".close_icon");
+
 // navigation bar
 let navigationBar = document.querySelector("#navigationBar");
 let home = document.querySelector("#home");
@@ -84,6 +87,7 @@ function homePage() {
     gsap.to(headerH1, {duration: 0.5, opacity:1, ease:"power1", delay:3})
     gsap.to(headerH1, {duration: 0.5, yPercent: -240, ease:"power1", delay:4})
     gsap.to(navigationBar,1, {opacity:1, ease:"back", delay:4})
+    gsap.to(closeIcon,1, {opacity:1, ease:"back", delay:4})
     gsap.to(section1HenryHouseImg, {duration: 0.5, opacity:1, ease:"power1", delay:5})
     gsap.to(section1H2,8, {text:"Welcome to the three homes that make up the Oshawa Museum represent an early settler community as all three are on their original foundations.",ease:"power1" ,delay:7})
     gsap.to(section1Btn,1, {opacity:1, ease:"power1", delay:16});
