@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.21 32.66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #976a4b;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0.25px;
+      }
+
+      .cls-2 {
+        fill: #bb936f;
+      }
+
+      .cls-3 {
+        fill: #624631;
+      }
+
+      .cls-4, .cls-7 {
+        fill: #f2f2f2;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-width: 0.4px;
+      }
+
+      .cls-10, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-6, .cls-7 {
+        stroke-width: 0.27px;
+      }
+
+      .cls-8, .cls-9 {
+        fill: #75665c;
+      }
+
+      .cls-10, .cls-8 {
+        stroke-width: 0.28px;
+      }
+
+      .cls-9 {
+        stroke-width: 0.28px;
+      }
+
+      .cls-11 {
+        fill: #49564c;
+      }
+
+      .cls-11, .cls-12, .cls-13 {
+        stroke-width: 0.2px;
+      }
+
+      .cls-12 {
+        fill: #899687;
+      }
+
+      .cls-13 {
+        fill: #51615a;
+      }
+
+      .cls-14 {
+        fill: #bfd19a;
+        stroke-width: 0.26px;
+      }
+
+      .cls-15 {
+        fill: #bebebe;
+        stroke-width: 0.11px;
+      }
+    </style>
+  </defs>
+  <title>jubilee_1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="map">
+      <g id="jubilee">
+        <polygon class="cls-1" points="159.65 16.06 159.62 30.51 69.41 30.51 69.4 16.02 159.65 16.06"/>
+        <path class="cls-2" d="M63.23,15.21l-.07,15.93a.48.48,0,0,0,.56.48l6.1-1.11V15.77Z"/>
+        <polygon class="cls-1" points="2.3 17.74 63.23 15.81 63.38 31.62 2.26 31.55 2.3 17.74"/>
+        <polygon class="cls-3" points="130.38 0.13 162.68 16.24 50.84 16.58 23.82 14.56 54.21 0.16 130.38 0.13"/>
+        <polygon class="cls-1" points="70.42 6.89 63.7 6.84 65.58 16.66 72.4 16.5 70.42 6.89"/>
+        <g>
+          <rect class="cls-4" x="134.04" y="17.47" width="8.23" height="12"/>
+          <line class="cls-5" x1="138.03" y1="17.75" x2="138.03" y2="29.04"/>
+        </g>
+        <rect class="cls-4" x="117.8" y="19.72" width="8.82" height="7.09"/>
+        <g>
+          <line class="cls-6" x1="120.29" y1="19.76" x2="120.29" y2="26.77"/>
+          <line class="cls-6" x1="124.07" y1="19.73" x2="124.07" y2="26.74"/>
+        </g>
+        <g>
+          <rect class="cls-4" x="104.04" y="19.56" width="8.82" height="7.09"/>
+          <g>
+            <line class="cls-6" x1="106.56" y1="19.56" x2="106.56" y2="26.57"/>
+            <line class="cls-6" x1="110.35" y1="19.53" x2="110.35" y2="26.54"/>
+          </g>
+        </g>
+        <g>
+          <rect class="cls-7" x="90.4" y="19.4" width="8.82" height="7.09"/>
+          <g>
+            <line class="cls-6" x1="92.83" y1="19.36" x2="92.83" y2="26.37"/>
+            <line class="cls-6" x1="96.62" y1="19.32" x2="96.62" y2="26.33"/>
+          </g>
+        </g>
+        <g>
+          <rect class="cls-7" x="74.75" y="19.08" width="8.82" height="7.09"/>
+          <g>
+            <line class="cls-6" x1="77.29" y1="19.16" x2="77.29" y2="26.17"/>
+            <line class="cls-6" x1="81.08" y1="19.12" x2="81.08" y2="26.13"/>
+          </g>
+        </g>
+        <rect class="cls-8" x="74.06" y="26.07" width="10.3" height="0.61"/>
+        <rect class="cls-8" x="89.6" y="26.07" width="10.3" height="0.61"/>
+        <rect class="cls-8" x="103.53" y="26.07" width="10.3" height="0.61"/>
+        <rect class="cls-8" x="117.26" y="26.47" width="10.3" height="0.61"/>
+        <path class="cls-9" d="M72.37,16.6l-2.76.88h-6.4L2.29,18.63l-.1-1.24,63.38-.81h6.8S72.38,16.6,72.37,16.6Z"/>
+        <line class="cls-10" x1="63.36" y1="17.59" x2="65.58" y2="16.58"/>
+        <path class="cls-8" d="M69.91,17.59h89.71l1.65-1.42-88.83.41-2.54,1S69.89,17.59,69.91,17.59Z"/>
+        <g>
+          <path class="cls-11" d="M132.28,17.93l6.26-4.62,6.3,4.65s0,0,0,0l-12.54,0S132.26,17.94,132.28,17.93Z"/>
+          <path class="cls-12" d="M137.9,11.73l.52,1.73,6.37,4.46s.05,0,0,0l-1-1.86-6-4.32S137.89,11.71,137.9,11.73Z"/>
+          <path class="cls-13" d="M132,15.86l.22,2a.08.08,0,0,0,.11,0l6.09-4.44-.53-1.74s0,0,0,0Z"/>
+        </g>
+        <polygon class="cls-3" points="3.71 7.64 0.18 17.47 65.58 16.66 63.7 6.84 3.71 7.64"/>
+        <rect class="cls-8" x="51.65" y="30.71" width="1.01" height="1.82"/>
+        <path class="cls-14" d="M49.11,29.94c2.12,1.74,4.25,1.82,6.33,0,1.8-2.72,1-6.59-1.81-11.29a1,1,0,0,0-1.7-.16C48.56,22.66,47.73,26.92,49.11,29.94Z"/>
+        <path class="cls-14" d="M74.06,28.89c.2-2.42,9.69-2,9.89,0Z"/>
+        <path class="cls-14" d="M90.25,28.89c.2-2.42,9.69-2,9.89,0Z"/>
+        <path class="cls-14" d="M97.31,28.89c.2-2.42,9.69-2,9.89,0Z"/>
+        <path class="cls-14" d="M82.37,28.89c.21-2.42,9.69-2,9.9,0Z"/>
+        <path class="cls-14" d="M111.24,28.89c.2-2.42,9.69-2,9.89,0Z"/>
+        <path class="cls-14" d="M103.77,28.89c.2-2.42,9.69-2,9.89,0Z"/>
+        <path class="cls-14" d="M117.9,28.89c.21-2.42,9.69-2,9.9,0Z"/>
+        <polygon class="cls-15" points="159.47 28.59 69.88 28.59 69.82 30.51 159.65 30.51 159.47 28.59"/>
+      </g>
+    </g>
+  </g>
+</svg>

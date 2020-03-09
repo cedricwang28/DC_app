@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.53 33.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #286258;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 1.53px;
+      }
+
+      .cls-2 {
+        font-size: 17.46px;
+        fill: #fff;
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+      }
+    </style>
+  </defs>
+  <title>henrySt</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="map">
+      <g id="henry">
+        <rect class="cls-1" x="0.77" y="0.77" width="113" height="32.42"/>
+        <text class="cls-2" transform="translate(7.93 23.13)">Henry St</text>
+      </g>
+    </g>
+  </g>
+</svg>

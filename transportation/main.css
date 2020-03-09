@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+.close_icon{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 1.5vw;
+    top: 2vh;
+}
+.close_icon:hover{
+    cursor: pointer;
+}
+
+section {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* splash page */
+#splashPage{
+    background-color: lightgrey;
+}
+
+#splashPage h1 {
+    font-family: 'Noto Sans';
+    font-size: 2em;
+}
+
+#splashPage button {
+    font-family: 'Noto Sans';
+    background-color: #748C85;
+    padding:1em;
+    border-radius: 0.2rem;
+    font-size:1em;
+    color:white;
+}
+
+#splashPage button:hover {
+    cursor: pointer;
+}
+
+#splashPage button:focus {
+    outline:none;
+}
+
+/* landing page */
+#landingPage {
+    background: url(./img/Artboard\ 2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carsvg {
+    width:100%;
+    height:auto;
+}
+
+.carsvg img{
+    width:100%;
+    height:auto;
+}
+
+#hopin {
+    font-size:1.5em;
+    font-family: 'Roboto Condensed';
+    font-weight: bolder;
+    position: absolute;
+    left:70vw;
+    top:140vh;
+    background: #ffe6db;
+    color:#604555;
+    padding:0.5em;
+    animation: scaling 1s infinite alternate ease-out;
+}
+
+@keyframes scaling {
+    from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1.2);
+      }
+}
+
+/* for the slider section */
+    #sliderPage {
+        background-color: black;
+    }
+    /*jssor slider loading skin double-tail-spin css*/
+
+    /*jssor slider bullet skin 071 css*/
+    .jssorb071 .i {position:absolute;color:#fff;font-family:"Helvetica neue",Helvetica,Arial,sans-serif;text-align:center;cursor:pointer;z-index:0;}
+    .jssorb071 .i .b {fill:#000;opacity:.2;}
+    .jssorb071 .i:hover {opacity:.7;}
+    .jssorb071 .iav {color:#000;}
+    .jssorb071 .iav .b {fill:#fff;opacity:1;}
+    .jssorb071 .i.idn {opacity:.3;}
+
+    /*jssor slider arrow skin 051 css*/
+    .jssora051 {display:block;position:absolute;cursor:pointer;}
+    .jssora051 .a {fill:none;stroke:#fff;stroke-width:1800;stroke-miterlimit:10;stroke-linecap: round;}
+    .jssora051:hover {opacity:.8;}
+    .jssora051.jssora051dn {opacity:.5;}
+    .jssora051.jssora051ds {opacity:.3;pointer-events:none;}

@@ -45,10 +45,10 @@ function initMap() {
 
     let options = {
         zoom: 16,
-        // center: {
-        //     lat: 43.863194,
-        //     lng: -78.828056
-        // },
+        center: {
+            lat: 43.863194,
+            lng: -78.828056
+        },
         mapTypeId: 'roadmap',
         styles: [
             {
@@ -324,6 +324,8 @@ function initMap() {
         fillOpacity:1,
         map:map
     });
+
+
 
     let beach = new google.maps.Polygon({
         path: [
@@ -619,13 +621,114 @@ function initMap() {
         map: map
     });
 
+    let transport = new google.maps.Marker({
+        position: {
+            lat: 43.862651,
+            lng: -78.832031
+        },
+        icon:{url:`img/transport.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let beachIcon = new google.maps.Marker({
+        position: {
+            lat: 43.864483,
+            lng: -78.825073
+        },
+        icon:{url:`img/beach.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let pierIcon = new google.maps.Marker({
+        position: {
+            lat: 43.864253,
+            lng: -78.822281
+        },
+        icon:{url:`img/boat.svg`, 
+              scaledSize: new google.maps.Size(35, 35)
+        },
+        map: map
+    });
+
+    let grave = new google.maps.Marker({
+        position: {
+            lat: 43.859093,
+            lng: -78.832114
+        },
+        icon:{url:`img/graves.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let buffalo = new google.maps.Marker({
+        position: {
+            lat: 43.863122,
+            lng: -78.830768
+        },
+        icon:{url:`img/buffalo.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let tree = new google.maps.Marker({
+        position: {
+            lat: 43.861105,
+            lng: -78.831072
+        },
+        icon:{url:`img/tree.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let cottage = new google.maps.Marker({
+        position: {
+            lat: 43.863086,
+            lng: -78.826879
+        },
+        icon:{url:`img/cottages.svg`, 
+              scaledSize: new google.maps.Size(30, 30)
+        },
+        map: map
+    });
+
+    let jubilee = new google.maps.Marker({
+        position: {
+            lat: 43.863219,
+            lng: -78.828442
+        },
+        icon:{url:`img/jubilee.svg`, 
+              scaledSize: new google.maps.Size(40, 40)
+        },
+        map: map
+    });
+
+    let gazebo = new google.maps.Marker({
+        position: {
+            lat: 43.862525,
+            lng: -78.828398
+        },
+        icon:{url:`img/gazebo.svg`, 
+              scaledSize: new google.maps.Size(20, 20)
+        },
+        map: map
+    });
+
+
+
     let restRoom1 = new google.maps.Marker({
         position: {
             lat: 43.864005,
             lng: -78.830663
         },
         icon:{url:`img/restroom-solid.svg`, 
-              scaledSize: new google.maps.Size(25, 25)
+              scaledSize: new google.maps.Size(20, 20)
         },
         map: map
     });
@@ -636,7 +739,7 @@ function initMap() {
             lng: -78.828936
         },
         icon:{url:`img/restroom-solid.svg`, 
-              scaledSize: new google.maps.Size(25, 25)
+              scaledSize: new google.maps.Size(20, 20)
         },
         map: map
     });
@@ -647,7 +750,7 @@ function initMap() {
             lng: -78.825900
         },
         icon:{url:`img/restroom-solid.svg`, 
-              scaledSize: new google.maps.Size(25, 25)
+              scaledSize: new google.maps.Size(20, 20)
         },
         map: map
     });
@@ -764,6 +867,13 @@ function initMap() {
 
 
 
+    transport.addListener('click', function() {
+        window.open("./transportation/index.html");
+    });
+
+
+
+
 
 
 
@@ -786,65 +896,65 @@ function initMap() {
 
 
 
-    let pos = {};
+    // let pos = {};
 
-    if (navigator.geolocation) {
+    // if (navigator.geolocation) {
 
-            navigator.geolocation.watchPosition(function(position) {
-                pos = {
-                  lat: position.coords.latitude,
-                  lng: position.coords.longitude
-                };
-                console.log(position);
+    //         navigator.geolocation.watchPosition(function(position) {
+    //             pos = {
+    //               lat: position.coords.latitude,
+    //               lng: position.coords.longitude
+    //             };
+    //             console.log(position);
 
 
-                // document.querySelector('.showheading').innerHTML = position.coords.heading;
+    //             // document.querySelector('.showheading').innerHTML = position.coords.heading;
                 
 
-                if(myPoint == undefined){
-                    map.setCenter(pos);
-                    myPoint = new google.maps.Marker({
-                        position:pos,
-                        map:map,
-                        icon:{path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                            scale: 6,
-                            fillColor: "red",
-                            rotation: 90,
-                            scaledSize: new google.maps.Size(100, 100)
-                        }
-                    });
-                }else{
-                    myPoint.setPosition(pos);
-                    myPoint.setIcon({
-                        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                        scale: 6,
-                        rotation: position.coords.heading
-                      });
-                }
+    //             if(myPoint == undefined){
+    //                 map.setCenter(pos);
+    //                 myPoint = new google.maps.Marker({
+    //                     position:pos,
+    //                     map:map,
+    //                     icon:{path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+    //                         scale: 6,
+    //                         fillColor: "red",
+    //                         rotation: 90,
+    //                         scaledSize: new google.maps.Size(100, 100)
+    //                     }
+    //                 });
+    //             }else{
+    //                 myPoint.setPosition(pos);
+    //                 myPoint.setIcon({
+    //                     path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+    //                     scale: 6,
+    //                     rotation: position.coords.heading
+    //                   });
+    //             }
 
 
 
-                // map.setCenter(pos);
+    //             // map.setCenter(pos);
 
-                // new google.maps.Marker({
-                //     position:{
-                //         lat:pos.lat,
-                //         lng:pos.lng
-                //     },
-                //     map:map
-                // });
-
-
-              }, function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-              },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
+    //             // new google.maps.Marker({
+    //             //     position:{
+    //             //         lat:pos.lat,
+    //             //         lng:pos.lng
+    //             //     },
+    //             //     map:map
+    //             // });
 
 
+    //           }, function() {
+    //             handleLocationError(true, infoWindow, map.getCenter());
+    //           },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
 
-      }else {
 
-        handleLocationError(false, infoWindow, map.getCenter());
-      }
+
+    //   }else {
+
+    //     handleLocationError(false, infoWindow, map.getCenter());
+    //   }
 
 
 }
