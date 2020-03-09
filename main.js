@@ -913,20 +913,20 @@ function initMap() {
 
 
 
-    let dest = new google.maps.MVCArray();
+    // let dest = new google.maps.MVCArray();
 
 
-    let boundary = new google.maps.Polyline({
-        path: dest,
-        strokeColor:"black",
-        map:map
-    });
+    // let boundary = new google.maps.Polyline({
+    //     path: dest,
+    //     strokeColor:"black",
+    //     map:map
+    // });
    
-    google.maps.event.addListener(map,'click',function(e){
-        boundary.getPath().push(e.latLng);
-        console.log(e.latLng.lat(),e.latLng.lng());
+    // google.maps.event.addListener(map,'click',function(e){
+    //     boundary.getPath().push(e.latLng);
+    //     console.log(e.latLng.lat(),e.latLng.lng());
         
-    });
+    // });
 
 
 
