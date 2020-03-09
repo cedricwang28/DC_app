@@ -868,7 +868,8 @@ function initMap() {
 
 
     transport.addListener('click', function() {
-        window.open("./transportation/index.html");
+        // window.open("./transportation/index.html");
+        window.location.replace("./transportation/index.html");
     });
 
 
