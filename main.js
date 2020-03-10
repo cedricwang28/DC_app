@@ -910,6 +910,11 @@ function initMap() {
         window.location.replace("./cemetery/index.html");
     });
 
+    buffalo.addListener('click', function() {
+        // window.open("./transportation/index.html");
+        window.location.replace("./buffalo/index.html");
+    });
+
 
 
 
