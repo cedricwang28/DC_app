@@ -1,5 +1,5 @@
 /*
-    for svg: preserve aspect ratio: none;
+    test for svg: preserve aspect ratio: none;
 
     color pallet: 
         green: #9ba97d
@@ -7,6 +7,18 @@
         soil grey: #c1beb8
         soil red: #9f3a1c
 */
+
+
+/* close icon to close this part of the app */
+
+.close_icon{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 2vw;
+    top: 2vh;
+    z-index: 100;
+}
 
 
 /* hide show with animation */
@@ -71,14 +83,19 @@ main {
 }
 
 
+/* intro-to-diggy */
+#intro-to-diggy{
+    height: 50vh;
+}
+
 
 /* grass */
 
 #grass {
-    position: relative;
-    top: 30vw;
-    height: 50vw;
-    background-image: url(../img/grass.svg);
+    /* position: relative; */
+    /* top: 30vw; */
+    height: 10vw;
+    background-image: url(../img/new_grass.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -101,14 +118,22 @@ main {
     /* position: relative; */
     position: sticky;
     height: 30vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: 0px; */
     /* left: -37vw; */
     margin-right: 65vw;
-    top: 30vh;
+    top: 35vh;
     z-index: 101;
+}
 
+#drill{
+    position: sticky;
+    height: 40vh;
+    margin-right: 65vw;
+    top: 30vh;
+    z-index: 102;
+    /* margin: 20px 0; */
 }
 
 
@@ -191,15 +216,35 @@ main {
 }
 
 
+
+/* media queries */
+
+/* tablet */
+@media only screen and (min-width: 600px) {
+    /* skeleton */
+    #skeleton {
+        height: 25vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px;
+        margin-right: 67vw;
+    }
+
+    #drill{
+        position: sticky;
+        height: 40vh;
+    }
+}
+
+
 /* desktop */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
 
     /* tunnel styles */
     .tunnel {
-        /* background-image: url(../img/tunnel.svg); */
-        margin-left: 5vw;
+        margin: 0 5vw;
         height: 100%;
-        width: 30vw;
+        width: 20vw;
         z-index: 100;
     }
 
@@ -210,21 +255,26 @@ main {
         background-size: cover;
         background-position: 0px;
         /* left: -37vw; */
-        margin-right: 60vw;
-
+        margin-right: 67vw;
     }
 
+    #drill{
+        position: sticky;
+        height: 60vh;
+        margin-right: 67vw;
+    }
 
+    #grass {
+        /* position: relative; */
+        /* top: 30vw; */
+        height: 10vw;
+        background-image: url(../img/new_grass.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 
 
 
-.close_icon{
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    left: 2vw;
-    top: 2vh;
-    z-index: 100;
-}
+
