@@ -45,7 +45,6 @@
 
 html {
     scroll-behavior: smooth;
-
 }
 
 
@@ -95,7 +94,7 @@ main {
     /* position: relative; */
     /* top: 30vw; */
     height: 10vw;
-    background-image: url(../img/new_grass.svg);
+    background-image: url(../img/grass.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -111,18 +110,37 @@ main {
 }
 
 
+/* scroll buttons */
+#scroll-down, #scroll-up{
+    font-size: 3rem;
+    color: white;
+    position: sticky;
+    margin-right: 65vw;
+    z-index: 101;
+    cursor: pointer;
+}
+
+#scroll-up{
+    top: 20vh;
+}
+
+#scroll-down{
+    top: 70vh;
+}
+
+
 
 
 /* skeleton */
 #skeleton {
     /* position: relative; */
     position: sticky;
-    height: 30vh;
+    height: 27vh;
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
     /* background-position: 0px; */
     /* left: -37vw; */
-    margin-right: 65vw;
+    margin-right: 67vw;
     top: 35vh;
     z-index: 101;
 }
@@ -204,11 +222,16 @@ main {
 }
 
 #ground section .content {
-    flex-grow: 2;
+    /* flex-grow: 2; */
+    flex-basis: 65%;
 }
 
 .quiz {
     background-color: white;
+    font-family: itc-galliard, serif;
+    font-weight: 900;
+    font-style: normal;
+    z-index: 105;
 }
 
 .information {
@@ -234,6 +257,11 @@ main {
         position: sticky;
         height: 40vh;
     }
+
+    #scroll-down, #scroll-up{
+        display: none;
+    }
+
 }
 
 
@@ -247,6 +275,11 @@ main {
         width: 20vw;
         z-index: 100;
     }
+
+    #scroll-down, #scroll-up{
+        display: none;
+    }
+
 
     /* skeleton */
     #skeleton {
@@ -262,15 +295,6 @@ main {
         position: sticky;
         height: 60vh;
         margin-right: 67vw;
-    }
-
-    #grass {
-        /* position: relative; */
-        /* top: 30vw; */
-        height: 10vw;
-        background-image: url(../img/new_grass.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 }
 
