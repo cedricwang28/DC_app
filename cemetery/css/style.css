@@ -76,16 +76,40 @@ main {
     color: #9f3a1c;
 }
 
-#intro a img {
+#intro a img{
     width: 8vw;
     max-width: 50px;
 }
 
 
-/* intro-to-diggy */
-#intro-to-diggy{
+
+
+/* intro-to-skully */
+#intro-to-skully{
     height: 50vh;
+    float: right;
+    width: 65vw;
 }
+
+#intro-to-skully * {
+    /* display: inline; */
+    text-align: left;
+    margin-left: auto;
+}
+
+#intro-to-skully a img{
+    width: 8vw;
+    max-width: 50px;
+}
+
+#intro-to-skully a{
+    font-family: itc-galliard, serif;
+    font-weight: 900;
+    font-style: normal;
+    color: white;
+}
+
+
 
 
 /* grass */
@@ -133,16 +157,21 @@ main {
 
 /* skeleton */
 #skeleton {
-    /* position: relative; */
     position: sticky;
     height: 27vh;
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-position: 0px; */
-    /* left: -37vw; */
     margin-right: 67vw;
     top: 35vh;
     z-index: 101;
+}
+
+.bubble{
+    display: none;
+    width: 20vw;
+    position: sticky;
+    height: 27vh;
+    margin-right: 40vw;
+    top: 15vh;
+    z-index: 110;
 }
 
 #drill{

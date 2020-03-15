@@ -1,28 +1,17 @@
 window.onload = function () {
+    // the close button
+    document.querySelector(".close_icon").addEventListener("click", function () {
+        window.location.replace("../index.html");
+    });
 
+    // for scrolling fade in of the quiz sections
     window.addEventListener("scroll", scrollAnimate);
 
-    let buttons = document.querySelectorAll(".quiz button");
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-
-            let soilId = button.dataset.soil;
-
-            let theQuiz = document.querySelector(`#${soilId} .quiz`);
-            theQuiz.classList.add("hide")
-
-            let theInfo = document.querySelector(`#${soilId} .information`);
-
-            theInfo.classList.remove("hide")
-            // theInfo.classList.add("to-animate-in");
-        });
-    });
+    optionButtons();
 
     let scrollUp = document.querySelector("#scroll-up");
     let scrollDown = document.querySelector("#scroll-down");
     let windowHeight = window.innerHeight;
-    console.log();
-    
 
     scrollUp.addEventListener("mousedown", function () {
         let windowPosition = window.scrollY;
@@ -35,21 +24,15 @@ window.onload = function () {
         window.scroll(0, windowPosition + windowHeight);
     })
 
-
-
-    // the close button
-    document.querySelector(".close_icon").addEventListener("click", function () {
-
-        window.location.replace("../index.html");
-    });
+    
 };
 
 
-// animate elements with scroll 
+// for scrolling fade in of the quiz sections
 function scrollAnimate() {
     let windowScrollPosition = window.scrollY;
     let toAnimateIn = document.querySelectorAll(".to-animate-in");
-    console.log("animating");
+    console.log("animating?");
 
     toAnimateIn.forEach(element => {
         if (windowScrollPosition > (element.parentNode.offsetTop + (this.window.innerHeight / 1.5))) {
@@ -59,6 +42,34 @@ function scrollAnimate() {
 }
 
 
+// things that option buttons do
+function optionButtons() {
+    let buttons = document.querySelectorAll(".quiz button");
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            // hiding the quiz and showing the information
+            let soilId = button.dataset.soil;
+            let theQuiz = document.querySelector(`#${soilId} .quiz`);
+            theQuiz.classList.add("hide")
+            let theInfo = document.querySelector(`#${soilId} .information`);
+            theInfo.classList.remove("hide")
+            // theInfo.classList.add("to-animate-in");
+
+
+            // working with options and showing right or wrong
+            let rightOrWrong = button.dataset.rightOrWrong;
+            console.dir(button);
+            
+
+            if (rightOrWrong == "correct") {
+
+            } else {
+                
+            }
+        });
+    });
+}
 
 
 
