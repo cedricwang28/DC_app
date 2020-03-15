@@ -7,7 +7,10 @@ window.onload = function () {
     // for scrolling fade in of the quiz sections
     window.addEventListener("scroll", scrollAnimate);
 
+
+    // things that option buttons do
     optionButtons();
+
 
     let scrollUp = document.querySelector("#scroll-up");
     let scrollDown = document.querySelector("#scroll-down");
@@ -51,21 +54,34 @@ function optionButtons() {
             // hiding the quiz and showing the information
             let soilId = button.dataset.soil;
             let theQuiz = document.querySelector(`#${soilId} .quiz`);
-            theQuiz.classList.add("hide")
+            theQuiz.classList.add("hide");
             let theInfo = document.querySelector(`#${soilId} .information`);
-            theInfo.classList.remove("hide")
+            theInfo.classList.remove("hide");
             // theInfo.classList.add("to-animate-in");
 
 
             // working with options and showing right or wrong
             let rightOrWrong = button.dataset.rightOrWrong;
+            let correctBubble = document.querySelector("#correct-bubble");
+            let incorrectBubble = document.querySelector("#incorrect-bubble");
             console.dir(button);
             
 
             if (rightOrWrong == "correct") {
-
-            } else {
+                console.log("correct");
                 
+                incorrectBubble.style.display = "none";
+                correctBubble.style.display = "inline-block";
+                setTimeout(() => {
+                    correctBubble.style.display = "none";
+                }, 1000);
+            } else {
+                console.log("incorrect");
+                correctBubble.style.display = "none";
+                incorrectBubble.style.display = "inline-block";
+                setTimeout(() => {
+                    incorrectBubble.style.display = "none";
+                }, 1000);
             }
         });
     });

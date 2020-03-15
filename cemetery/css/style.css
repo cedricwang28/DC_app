@@ -89,12 +89,18 @@ main {
     height: 50vh;
     float: right;
     width: 65vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5vw;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
-#intro-to-skully * {
-    /* display: inline; */
-    text-align: left;
-    margin-left: auto;
+#intro-to-skully > * {
+    display: inline;
+    margin: 20px 0;
+    /* text-align: left; */
+    /* margin-left: auto; */
 }
 
 #intro-to-skully a img{
@@ -109,6 +115,24 @@ main {
     color: white;
 }
 
+/* this is skully */
+#intro-to-skully-1{
+    align-self: flex-start;
+}
+
+/* rules */
+#intro-to-skully-2{
+    align-self: flex-start;
+    margin: 0;
+    color: #aed6df;
+}
+
+/* lets go link */
+#intro-to-skully-3{
+    align-self: center;
+    border: #aed6df solid 1vw;
+    padding: 15px;
+}
 
 
 
@@ -166,10 +190,10 @@ main {
 
 .bubble{
     display: none;
-    width: 20vw;
+    width: 35vw;
     position: sticky;
     height: 27vh;
-    margin-right: 40vw;
+    margin-right: 30vw;
     top: 15vh;
     z-index: 110;
 }
@@ -324,6 +348,16 @@ main {
         position: sticky;
         height: 60vh;
         margin-right: 67vw;
+    }
+
+    .bubble{
+        display: none;
+        width: 20vw;
+        position: sticky;
+        height: 27vh;
+        margin-right: 40vw;
+        top: 15vh;
+        z-index: 110;
     }
 }
 
