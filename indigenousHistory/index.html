@@ -9,17 +9,22 @@
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js">
   </script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+  </script>
   <!-- auto play asset animations -->
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <!-- <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script> -->
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
   <!-- camera feed -->
   <!-- <script src="https://rawgit.com/flysonic10/aframe-passthrough/master/dist/aframe-passthrough-component.min.js"></script> -->
-  
+  <!-- <script src="./assets/js/fbx-model.js"></script> -->
+
+
 
 </head>
 
 <body>
-  <img src="./assets/close_icon.png" alt="close" class="close_icon">
-
+  <p id="closeVR">Close</p>
   <a-scene>
     <a-assets>
       <!-- lights -->
@@ -37,26 +42,55 @@
       <a-asset-item id="cityModel" src="./trial/person/person.gltf"></a-asset-item>
       <!-- animated dog -->
       <a-asset-item id="animatedPetModel" src="./trial/dog/scene.gltf"></a-asset-item>
+      <a-asset-item id="treeGLTF" src="./trial/tree/maya-tree.glb"></a-asset-item>
+      <a-asset-item id="fishy" src="./trial/fish/cod.glb"></a-asset-item>
+      <!-- <a-asset-item id="tree" src="./trial/tree-05-0bj/tree-05.fbx"></a-asset-item> -->
+
+
+
+      <!-- <a-asset-item id="tree-obj" src="./trial/tree/tree_from_Maya.obj"></a-asset-item> -->
     </a-assets>
 
 
-    <!-- <a-passthrough width="16" height="9"></a-passthrough> -->
+    <!-- <a-entity obj-model="obj: url(./trial/tree-05-obj/tree-05.obj); mtl: url(./trial/tree-05-obj/tree-05.mtl)"
+      scale="1 1 1" position="-10 0.3 9"></a-entity>
+ -->
 
+
+    <!-- ------- FIXED ELEMENTS ------- -->
+    <nav>
+      <h1 id="camera1-btn">Camera 1</h1>
+      <h2 id="camera2-btn">Camera 2</h2>
+      <h3 id="camera3-btn">Camera 3</h3>
+      <h4 id="camera4-btn">Camera 4</h4>
+    </nav>
     <!-- ------ CAMERAS -------- -->
-    <!-- <a-entity id="rig" position="0 13 20"> -->
-    <!-- <a-camera id="camera" camera look-controls position="0 10 20"></a-camera> -->
-    <!-- </a-entity> -->
-
-    <!-- <a-entity id="rig2" position="20 13 20"> -->
-    <!-- <a-camera id="camera2" camera position="0 1 20" look-controls>
-          <a-cursor position="0 0 -1" geometry="primitive: ring; radiusOuter: 0.02; radiusInner: 0.01;"
-              material="color: #11d8c4; shader: flat" fuse="true" timeout="500">
-          </a-cursor>
-      </a-camera> -->
+    <a-entity id="rig">
+      <a-camera id="camera" camera look-controls position="-100 3 3">
+        <a-cursor position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.030; radiusInner: 0.020;"
+          material="color: #11d8c4; shader: flat" fuse="true" timeout="10">
+        </a-cursor>
+      </a-camera>
+      <a-camera id="camera2" camera look-controls position="0 3 3">
+        <a-cursor position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.030; radiusInner: 0.020;"
+          material="color: #11d8c4; shader: flat" fuse="true" timeout="10">
+        </a-cursor>
+      </a-camera>
+      <a-camera id="camera3" camera look-controls position="83 3 -25">
+        <a-cursor position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.030; radiusInner: 0.020;"
+          material="color: #11d8c4; shader: flat" fuse="true" timeout="10">
+        </a-cursor>
+      </a-camera>
+      <a-camera id="camera4" camera look-controls position="83 3 25">
+        <a-cursor position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.030; radiusInner: 0.020;"
+          material="color: #11d8c4; shader: flat" fuse="true" timeout="10">
+        </a-cursor>
+      </a-camera>
+    </a-entity>
 
     <!-- <a-entity position="0 3.2 0"> -->
-      <a-entity camera="active:true" look-controls wasd-controls position="0 3.2 0">
-        <!-- <a-entity position="0 0 -3"
+    <a-entity camera="active:true" look-controls wasd-controls position="0 3.2 0">
+      <!-- <a-entity position="0 0 -3"
                     geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;"
                     material="color: cyan; shader: flat"
                     cursor="maxDistance: 2; fuse: true"
@@ -66,20 +100,20 @@
           <a-animation begin="fusing" easing="ease-in" attribute="scale"
             fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
         </a-entity> -->
-        <a-entity
-          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
-          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
-          animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
-          cursor="fuse: true;" material="color: black; shader: flat" position="0 0 -2.5"
-          geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06">
-        </a-entity>
+      <a-entity
+        animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+        animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+        animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+        cursor="fuse: true;" material="color: black; shader: flat" position="0 0 -2.5"
+        geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06">
+      </a-entity>
       <!-- </a-entity> -->
     </a-entity>
 
     <a-entity id="player" collider-check>
 
       <a-entity raycaster="objects: .collidable" position="0 -0.9 0" rotation="90 0 0"></a-entity>
-      
+
       <a-entity id="greenBox" class="collidable" position="-23 0.5 -3">
         <a-box position="0 0.5 -3" crusor-listener rotation="0 5 0" color="green" width="5" height="5" depth="5">
           <a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="2000" fill="backwards">
@@ -93,7 +127,7 @@
 
 
     <!-- TIME 1 -->
-    <a-entity position="-100 3.5 3">
+    <a-entity position="-100 0.5 3">
       <a-entity geometry="primitive: circle; radius: 8" rotation="-90 0 0" position="0 0 0" material="color: grey">
       </a-entity>
     </a-entity>
@@ -101,6 +135,9 @@
     <!-- placeholder 1 -->
     <a-box position="-43 0.5 -3" crusor-listener rotation="0 5 0" color="#4CC3D9" width="10" height="10" depth="10">
     </a-box>
+    <a-entity gltf-model="#treeGLTF" scale="0.5 0.5 0.5" position="3 1 -3" rotation="0 0 0"></a-entity>
+    <a-entity gltf-model="#fishy" scale="2 2 2" position="-2 1 -3" rotation="0 0 0"></a-entity>
+
 
     <!-- TIME 2 -->
     <a-entity position="0 0.5 0">
@@ -115,8 +152,8 @@
       <a-curvedimage src="#my-image" height="2.0" radius="3.5" theta-length="72" position="-1.5 2.5 -0.5"
         rotation="0 30 0" scale="2 2 2"></a-curvedimage>
       <!-- TEXT -->
-      <a-text color="brown" width="10" rotation="25 -5 5" position="0 5 -5" font="https://cdn.aframe.io/fonts/mozillavr.fnt"
-      value="Indigenous History"></a-text>
+      <a-text color="brown" width="10" rotation="25 -5 5" position="0 5 -5"
+        font="https://cdn.aframe.io/fonts/mozillavr.fnt" value="Indigenous History"></a-text>
 
 
     </a-entity>
@@ -141,10 +178,6 @@
 
 
     <!-- ENVIRONMENT -->
-
-    <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
     <a-entity position="0 0 0">
       <!-- sidewalk / path -->
       <a-plane position="140 0.03 -39" rotation="-90 12 0" width="350" height="25" color="#ECECEC"></a-plane>
@@ -171,10 +204,6 @@
     <a-entity light="type: directional; color: #FFF; intensity: 0.3" position="-0.5 1 1"></a-entity>
 
   </a-scene>
-
-
-
-
 
   <script src="./assets/js/main.js"></script>
 </body>
