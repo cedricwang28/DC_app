@@ -52,6 +52,7 @@ let section3H1 = document.querySelector("#section3H1");
 
 
 /* --------------------- sectionexecution --------------------- */
+// default value is false so this section timelines will not play at the beginning
 let executeSection2 = false;
 let executeSection3 = false;
 
@@ -142,7 +143,7 @@ function animate() {
 }
 
 
-
+// close button for the main map
 document.querySelector(".close_icon").addEventListener("click",function(){
         
     window.location.replace("../index.html");
