@@ -8,19 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <!-- link to google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- link to jquery -->
+    <script src="./jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <nav id="navigationBar">
-        <a id="home">
-            <svg id="homeButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path stroke="#FFFFFF" stroke-width="20" d="m503.871094 231.433594-236.800782-226.984375c-6.183593-5.933594-15.957031-5.933594-22.140624 0l-237.035157 227.21875c-5.015625 5.015625-7.894531 11.925781-7.894531 18.988281 0 14.699219 11.96875 26.667969 26.667969 26.667969h37.332031v202.664062c0 17.664063 14.335938 32 32 32h90.667969c8.832031 0 16-7.167969 16-16v-138.664062c0-2.925781 2.386719-5.335938 5.332031-5.335938h96c2.921875 0 5.332031 2.410157 5.332031 5.335938v138.664062c0 8.832031 7.167969 16 16 16h90.667969c17.664062 0 32-14.335937 32-32v-202.664062h37.332031c14.699219 0 26.667969-11.96875 26.667969-26.667969 0-7.0625-2.878906-13.972656-8.128906-19.222656zm0 0"/></svg>
-        </a>
-        <a id="navHenry">Henry House</a>
-        <a id="navGuy">Guy House</a>
-        <a id="navRobinson">Robinson House</a>
-    </nav>
+
     <img src="./images/close_icon.png" alt="close" class="close_icon">
     
     <main>
+
         <!-- feature page -->
         <section id="section1">
             <h1 id="headerH1">Museum Houses</h1>
@@ -35,15 +31,91 @@
 
         <!-- Henry House -->
         <section id="section2">
-            <h1 id="section2H1">Henry House</h1>
-            <img src="./images/henryHouse/thomasHenry.png" class="portrait" alt="henryHouse" id="section2HenryImage">
-            <h4 id="section2h4">Thomas Henry</h4>
-            <p id="section2p">[1798 - 1879]</p>
-            <h1 id="section2H2"></h1>
-            <button id="section2Btn">
+            <article id="section2Head">
+                <h1 id="section2H1">Henry House</h1>
+                <img src="./images/henryHouse/thomasHenry.png" class="portrait" alt="henryHouse" id="section2HenryImage">
+                <h4 id="section2h4">Thomas Henry</h4>
+            </article>
+
+            <article class="timeline">
+                <div class="card reveal">
+                    <p>1798: BORN</p>
+                    <li>Born in Township of Drumbess, County Cavan, Ireland.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1811: CANADA</p>
+                    <li>Moved to Canada with his father John Henery and Nancy Bigger with their four sons and three daughters.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1812: WAR TIME</p>
+                    <li>Thomas was hired during the war as an attendant to judge Powell and travelled with the judge on several trips throughout Upper Canada. he also did some military duty until peace was restored.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1815: FARM PURCHASE</p>
+                    <li>John Henery moved the family to easy Whitby where he purchased a farm in what is now Lakeview Park, Oshawa.</li>
+                    <li>In the same year, Nancy Bigger Henry died and was one of the first burials in the Harbour Pioneer Cemetery.</li>
+                    <li>Thomas Henry married Elizabeth “Betsey” Davies (born October 1, 1800)</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1820: EMBARKED CAREER</p>
+                    <li>Thomas Henry farmed his land and embarked upon a career as a public speaker.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1829: LETTER OF SUPPORT</p>
+                    <li>Thomas receives Christian Church gave Thomas letters of support.</li>
+                    <li>Thomas's wife died and was left alone to raise five sons.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1830: Lurenda's Love</p>
+                    <li>Met Lurenda Abbey of Hope Township and both got married.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1832: Minister</p>
+                    <li>Thomas became an ordained minister.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1840: pastorate</p>
+                    <li>Chosen as pastorate of the Church of Whitby which later became affiliated with the Christian Church.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1843: First Church</p>
+                    <li>The First Christian Church was built at the corner of Richmond and Church Streets.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1850: Harbour Master</p>
+                    <li>Thomas also became President of the Sydenham Harbour Company and became Harbour Master.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1871: Trustee</p>
+                    <li>Thomas was appointed Trustee of Starkey Seminary a college in the United States of the Christian denomination.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1875: New Church</p>
+                    <li>The new Christian Church was built on Centre Street, where Oshawa City Hall is located, and the church was named Centre Street United Church.</li>
+                </div>
+
+                <div class="card reveal">
+                    <p>1879: FINAL RESTING</p>
+                    <li>Henry died at the age of 81.</li>
+                </div>
+            </article>
+            
+            <!-- <button id="section2Btn">
                 <div id="pushBtn2"></div>
                 <object id="section2DownArrow" data="./images/downArrow.svg" type="image/svg+xml"></object>
-            </button>
+            </button> -->
         </section>
 
         <!-- Guy House -->
@@ -51,7 +123,18 @@
             <h1 id="section3H1"></h1>
             <button id="section3Btn">Home</button>
         </section>
+
     </main>
+
+    <!-- navigation bar -->
+    <nav id="navigationBar">
+        <a id="home">
+            <svg id="homeButton" outline="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path stroke="#FFFFFF" stroke-width="20" d="m503.871094 231.433594-236.800782-226.984375c-6.183593-5.933594-15.957031-5.933594-22.140624 0l-237.035157 227.21875c-5.015625 5.015625-7.894531 11.925781-7.894531 18.988281 0 14.699219 11.96875 26.667969 26.667969 26.667969h37.332031v202.664062c0 17.664063 14.335938 32 32 32h90.667969c8.832031 0 16-7.167969 16-16v-138.664062c0-2.925781 2.386719-5.335938 5.332031-5.335938h96c2.921875 0 5.332031 2.410157 5.332031 5.335938v138.664062c0 8.832031 7.167969 16 16 16h90.667969c17.664062 0 32-14.335937 32-32v-202.664062h37.332031c14.699219 0 26.667969-11.96875 26.667969-26.667969 0-7.0625-2.878906-13.972656-8.128906-19.222656zm0 0"/></svg>
+        </a>
+        <a id="navHenry">Henry House</a>
+        <a id="navGuy">Guy House</a>
+        <a id="navRobinson">Robinson House</a>
+    </nav>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>

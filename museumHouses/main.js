@@ -38,12 +38,11 @@ function section1SpeechFun() {
 /* --------------------- section 2 --------------------- */
 let section2 = document.querySelector("#section2");
 let section2H1 = document.querySelector("#section2H1");
-let section2H2 = document.querySelector("#section2H2");
 let section2HenryImage = document.querySelector("#section2HenryImage");
 let section2Btn = document.querySelector("#section2Btn");
-let pushBtn2 = document.querySelector("#pushBtn2");
+// let pushBtn2 = document.querySelector("#pushBtn2");
 let section2h4 = document.querySelector("#section2h4");
-let section2p = document.querySelector("#section2p");
+let timeline = document.querySelector(".timeline");
 
 /* --------------------- section 3 --------------------- */
 let section3 = document.querySelector("#section3");
@@ -75,7 +74,7 @@ window.onload = function(){
     home.addEventListener("click", section4Animation);
     pushBtn1.addEventListener("click", section2Animation);
     navHenry.addEventListener("click", section2Animation);
-    pushBtn2.addEventListener("click", section3Animation);
+    // pushBtn2.addEventListener("click", section3Animation);
     navGuy.addEventListener("click", section3Animation);
     section3Btn.addEventListener("click", section4Animation);
     navRobinson.addEventListener("click", section4Animation);
@@ -104,10 +103,16 @@ function section2Animation() {
     gsap.to(section2H1, {duration: 0.5, opacity:1, ease:"power1", delay:2})
     gsap.to(section2H1, {duration: 0.5, yPercent: 0, ease:"power1", delay:2})
     gsap.to(section2HenryImage, {duration: 0.5, opacity:1, ease:"power1", delay:3})
-    gsap.to(section2h4,1, {opacity: 1, ease:"power1",delay:7, delay:3.5})
-    gsap.to(section2p,1, {opacity: 1, ease:"power1",delay:7, delay:4})
-    gsap.to(section2Btn,1, {opacity:1, ease:"power1", delay:5});
-
+    gsap.to(section2h4,1, {opacity: 1, ease:"power1", delay:3.5})
+    gsap.to(timeline,1, {opacity: 1, ease:"power1", delay:4})
+    $(".reveal").each(function(i){
+        gsap.from(this, 0.25, {
+            delay: 4.5 + i * 0.25,
+            opacity: 0,
+            y: -10,
+            ease: SteppedEase.config(12)
+        });
+    });
 }
 
 // function for timeline3
