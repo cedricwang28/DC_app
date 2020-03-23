@@ -123,14 +123,14 @@ function optionButtons() {
                     tunnel.style.marginRight = `${originalMargin}px`;
                 })
 
-                
-                
-                
-                
+
+
+
+
                 /* for (let i = 1; i < 3; i++) {
                     theElements[i].style.height = `${originalHeights[i]}px`;
                 } */
-                
+
 
                 setTimeout(() => {
                     correctBubble.style.display = "none";
@@ -149,22 +149,27 @@ function optionButtons() {
                 }) */
 
 
-                
+
                 changingWidth -= Math.floor(changingWidth / 5);
                 changingMargin += Math.floor(changingMargin / 3);
-                console.log(changingWidth);
                 
+                // changing less if it's mobile
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    changingWidth -= Math.floor(changingWidth / 100);
+                    changingMargin += Math.floor(changingMargin);
+                }
+
+                console.log(changingWidth, changingMargin);
+                
+
                 tunnels.forEach(tunnel => {
                     tunnel.style.width = `${changingWidth}px`;
 
                     tunnel.style.marginLeft = `${changingMargin}px`;
                     tunnel.style.marginRight = `${changingMargin}px`;
-                    console.log(changingMargin);
-                    
-                    // tunnel.style.marginRight = `${changingMargin}px`;
                 })
 
-                
+
 
 
                 /* for (let i = 1; i < 3; i++) {
@@ -178,7 +183,7 @@ function optionButtons() {
                 // checking if they gave 3 wrong answers concurrently
                 if (theWrongs == 2) {
                     console.log("DANGER");
-                    
+
                 }
                 if (theWrongs == 3) {
                     console.log("GAME OVER");

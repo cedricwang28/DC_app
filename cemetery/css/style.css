@@ -308,6 +308,12 @@ main {
     font-size: 0.75rem;
 }
 
+.quiz div{
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .information {
     background-color: white;
 }
@@ -389,6 +395,10 @@ main {
     .quiz h2 {
         font-size: 1.5rem;
         margin-bottom: 1.5em;
+    }
+
+    .quiz div{
+        display: block;
     }
 
     .quiz button {
