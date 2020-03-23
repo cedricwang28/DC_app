@@ -1,4 +1,5 @@
-window.onload = function () {
+window.addEventListener('DOMContentLoaded', (event) => {
+
     // the close button
     document.querySelector(".close_icon").addEventListener("click", function () {
         window.location.replace("../index.html");
@@ -27,8 +28,8 @@ window.onload = function () {
         window.scroll(0, windowPosition + windowHeight);
     })
 
-    
-};
+
+});
 
 
 // for scrolling fade in of the quiz sections
@@ -45,9 +46,48 @@ function scrollAnimate() {
 }
 
 
+
+// flag for how many wrong answers have been given concurrently
+let theWrongs = 0;
+
+let tunnels = document.querySelectorAll(".tunnel");
+
+// let drill = document.querySelector("#drill");
+// let skeleton = document.querySelector("#skeleton");
+
+// array of all the elements to play with 
+// let theElements = [tunnels, drill, skeleton];
+
+// getting the width of the 1st tunnel cuz they all have the same value
+let tunnelsWidth = tunnels[0].offsetWidth;
+let originalWidth = tunnelsWidth;
+let changingWidth = originalWidth;
+
+// getting the margin left and right, converting to number and flooring them. 
+let tunnelMarginLeft = Math.floor(parseInt((window.getComputedStyle(tunnels[0])).getPropertyValue("margin-left").slice(0, -2)));
+let tunnelMarginRight = Math.floor(parseInt((window.getComputedStyle(tunnels[0])).getPropertyValue("margin-left").slice(0, -2)));
+let originalMargin = tunnelMarginLeft;
+
+
+let changingMargin = originalMargin;
+
+
+
+// let drillHeight = drill.offsetHeight;
+// let skeletonHeight = skeleton.offsetHeight;
+
+// saving the original heights of all elements to reset on correct answer
+// let originalHeights = [tunnelsHeight, drillHeight, skeletonHeight];
+
+
+// giving the changing heights an initail value of original heights
+
+
+
 // things that option buttons do
 function optionButtons() {
     let buttons = document.querySelectorAll(".quiz button");
+
     buttons.forEach(button => {
         button.addEventListener("click", function () {
 
@@ -57,7 +97,6 @@ function optionButtons() {
             theQuiz.classList.add("hide");
             let theInfo = document.querySelector(`#${soilId} .information`);
             theInfo.classList.remove("hide");
-            // theInfo.classList.add("to-animate-in");
 
 
             // working with options and showing right or wrong
@@ -65,20 +104,86 @@ function optionButtons() {
             let correctBubble = document.querySelector("#correct-bubble");
             let incorrectBubble = document.querySelector("#incorrect-bubble");
             console.dir(button);
-            
 
+
+
+            // correct answer
             if (rightOrWrong == "correct") {
                 console.log("correct");
-                
+
                 incorrectBubble.style.display = "none";
                 correctBubble.style.display = "inline-block";
+                theWrongs = 0;
+
+
+                tunnels.forEach(tunnel => {
+                    tunnel.style.width = `${originalWidth}px`;
+
+                    tunnel.style.marginLeft = `${originalMargin}px`;
+                    tunnel.style.marginRight = `${originalMargin}px`;
+                })
+
+                
+                
+                
+                
+                /* for (let i = 1; i < 3; i++) {
+                    theElements[i].style.height = `${originalHeights[i]}px`;
+                } */
+                
+
                 setTimeout(() => {
                     correctBubble.style.display = "none";
                 }, 1000);
+
+
+                // incorrect answer
             } else {
                 console.log("incorrect");
                 correctBubble.style.display = "none";
                 incorrectBubble.style.display = "inline-block";
+                theWrongs++;
+
+                /* theElements[0].forEach(tunnel => {
+                    tunnel.style.height -= originalHeights[0] / 5;
+                }) */
+
+
+                
+                changingWidth -= Math.floor(changingWidth / 5);
+                changingMargin += Math.floor(changingMargin / 3);
+                console.log(changingWidth);
+                
+                tunnels.forEach(tunnel => {
+                    tunnel.style.width = `${changingWidth}px`;
+
+                    tunnel.style.marginLeft = `${changingMargin}px`;
+                    tunnel.style.marginRight = `${changingMargin}px`;
+                    console.log(changingMargin);
+                    
+                    // tunnel.style.marginRight = `${changingMargin}px`;
+                })
+
+                
+
+
+                /* for (let i = 1; i < 3; i++) {
+                    changinglHeights[i] -= Math.floor(changinglHeights[i] / 5);
+                    theElements[i].style.height = `${changinglHeights[i]}px`;
+                } */
+
+
+
+
+                // checking if they gave 3 wrong answers concurrently
+                if (theWrongs == 2) {
+                    console.log("DANGER");
+                    
+                }
+                if (theWrongs == 3) {
+                    console.log("GAME OVER");
+                }
+
                 setTimeout(() => {
                     incorrectBubble.style.display = "none";
                 }, 1000);
@@ -86,8 +191,6 @@ function optionButtons() {
         });
     });
 }
-
-
 
 
 /* 

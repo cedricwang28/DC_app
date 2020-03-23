@@ -11,13 +11,23 @@
 
 /* close icon to close this part of the app */
 
-.close_icon{
+.close_icon {
     position: fixed;
     width: 30px;
     height: 30px;
     left: 2vw;
     top: 2vh;
-    z-index: 100;
+    z-index: 500;
+}
+
+
+/* overlay-pulse styling */
+#overlay-pulse{
+    z-index: 94;
+    position: fixed;
+    background-color: #9f3a1c;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -76,7 +86,7 @@ main {
     color: #9f3a1c;
 }
 
-#intro a img{
+#intro a img {
     width: 8vw;
     max-width: 50px;
 }
@@ -85,30 +95,31 @@ main {
 
 
 /* intro-to-skully */
-#intro-to-skully{
+#intro-to-skully {
     height: 50vh;
     float: right;
     width: 65vw;
     display: flex;
     flex-direction: column;
     margin-right: 5vw;
+    z-index: 120;
     /* justify-content: center; */
     /* align-items: center; */
 }
 
-#intro-to-skully > * {
+#intro-to-skully>* {
     display: inline;
     margin: 20px 0;
     /* text-align: left; */
     /* margin-left: auto; */
 }
 
-#intro-to-skully a img{
+#intro-to-skully a img {
     width: 8vw;
     max-width: 50px;
 }
 
-#intro-to-skully a{
+#intro-to-skully a {
     font-family: itc-galliard, serif;
     font-weight: 900;
     font-style: normal;
@@ -116,19 +127,19 @@ main {
 }
 
 /* this is skully */
-#intro-to-skully-1{
+#intro-to-skully-1 {
     align-self: flex-start;
 }
 
 /* rules */
-#intro-to-skully-2{
+#intro-to-skully-2 {
     align-self: flex-start;
     margin: 0;
     color: #aed6df;
 }
 
 /* lets go link */
-#intro-to-skully-3{
+#intro-to-skully-3 {
     align-self: center;
     border: #aed6df solid 1vw;
     padding: 15px;
@@ -159,7 +170,8 @@ main {
 
 
 /* scroll buttons */
-#scroll-down, #scroll-up{
+#scroll-down,
+#scroll-up {
     font-size: 3rem;
     color: white;
     position: sticky;
@@ -168,11 +180,11 @@ main {
     cursor: pointer;
 }
 
-#scroll-up{
+#scroll-up {
     top: 20vh;
 }
 
-#scroll-down{
+#scroll-down {
     top: 70vh;
 }
 
@@ -188,7 +200,7 @@ main {
     z-index: 101;
 }
 
-.bubble{
+.bubble {
     display: none;
     width: 35vw;
     position: sticky;
@@ -198,7 +210,7 @@ main {
     z-index: 110;
 }
 
-#drill{
+#drill {
     position: sticky;
     height: 40vh;
     margin-right: 65vw;
@@ -221,9 +233,9 @@ main {
 /* tunnel styles */
 .tunnel {
     /* background-image: url(../img/tunnel.svg); */
-    margin-left: 5vw;
+    margin-left: 1vw;
     height: 100%;
-    width: 25vw;
+    width: 33vw;
     z-index: 100;
 }
 
@@ -285,6 +297,15 @@ main {
     font-weight: 900;
     font-style: normal;
     z-index: 105;
+    padding: 10px;
+}
+
+.quiz h2 {
+    font-size: 1rem;
+}
+
+.quiz button {
+    font-size: 0.75rem;
 }
 
 .information {
@@ -297,6 +318,7 @@ main {
 
 /* tablet */
 @media only screen and (min-width: 600px) {
+
     /* skeleton */
     #skeleton {
         height: 25vh;
@@ -306,12 +328,13 @@ main {
         margin-right: 67vw;
     }
 
-    #drill{
+    #drill {
         position: sticky;
         height: 40vh;
     }
 
-    #scroll-down, #scroll-up{
+    #scroll-down,
+    #scroll-up {
         display: none;
     }
 
@@ -329,7 +352,8 @@ main {
         z-index: 100;
     }
 
-    #scroll-down, #scroll-up{
+    #scroll-down,
+    #scroll-up {
         display: none;
     }
 
@@ -344,13 +368,13 @@ main {
         margin-right: 67vw;
     }
 
-    #drill{
+    #drill {
         position: sticky;
         height: 60vh;
         margin-right: 67vw;
     }
 
-    .bubble{
+    .bubble {
         display: none;
         width: 20vw;
         position: sticky;
@@ -359,9 +383,15 @@ main {
         top: 15vh;
         z-index: 110;
     }
+
+
+
+    .quiz h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5em;
+    }
+
+    .quiz button {
+        font-size: 1rem;
+    }
 }
-
-
-
-
-
