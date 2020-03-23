@@ -249,24 +249,26 @@ nav{
 }
 
 .card p{
+    text-align: justify;
+}
+
+.card li{
     font-size: 14pt;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: royalblue;
-}
-
-.card li{
     list-style: url(./images/history.png);
-    list-style-position: outside;
-    margin-left: 35px;
-    text-align: justify;
 }
 
 #section2Head{
     height: 30vh;
     position: relative;
     top: -50px;
+}
+
+.historyIcon{
+    background-image: url(./images/history.png);
 }
 
 .timeline{
@@ -309,7 +311,7 @@ nav{
         text-align: left;
         position: relative;
         background: rgba(255, 255, 255, 0.9);
-        width: 80vw;
+        width: 85vw;
         color: black;
         border-radius: 5px;
         padding: 10px;

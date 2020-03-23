@@ -106,10 +106,15 @@ function section2Animation() {
     gsap.to(section2h4,1, {opacity: 1, ease:"power1", delay:3.5})
     gsap.to(timeline,1, {opacity: 1, ease:"power1", delay:4})
     $(".reveal").each(function(i){
-        gsap.from(this, 0.25, {
-            delay: 4.5 + i * 0.25,
+        gsap.fromTo(this, 0.25,{
             opacity: 0,
+            y: 0,
+            scale: 0
+        }, {
+            delay: 4.5 + i * 0.25,
+            opacity: 1,
             y: -10,
+            scale: 1,
             ease: SteppedEase.config(12)
         });
     });
