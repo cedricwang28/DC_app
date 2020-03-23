@@ -217,6 +217,11 @@ nav{
     opacity: 0;
 }
 
+#section2h4{
+    position: relative;
+    top: -5px;
+}
+
 #section2HenryImage{
     opacity: 0;
     margin-top: 10px;
@@ -250,6 +255,7 @@ nav{
 
 .card p{
     text-align: justify;
+    position: relative;
 }
 
 .card li{
@@ -259,6 +265,7 @@ nav{
     text-transform: uppercase;
     color: royalblue;
     list-style: url(./images/history.png);
+    position: relative;
 }
 
 #section2Head{
@@ -272,10 +279,10 @@ nav{
 }
 
 .timeline{
-    height: 50vh;
+    height: 40vh;
     overflow-y: scroll;
     position: relative;
-    top: -40px;
+    top: -20px;
     border-radius: 5px;
     scroll-behavior: smooth;
     opacity: 0;
