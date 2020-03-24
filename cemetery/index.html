@@ -11,16 +11,15 @@
 </head>
 
 <body>
+    <!-- <div id="overlay-pulse"></div> -->
     <img src="./img/close_icon.png" alt="close" class="close_icon">
 
     <main>
         <section id="intro">
             <h1>Port Oshawa Pioneer Cemetery</h1>
             <h4>Welcome to the oldest graveyard in Oshawa.</h4>
-            <h5>Originally located just east of the present day harbour.</h5>
 
-
-            <a href="#grass">
+            <a href="#intro-to-skully">
                 <div>
                     <img src="img/icons/scroll.svg" alt="">
                     <p>Let's Dig Deeper</p>
@@ -29,33 +28,66 @@
 
         </section>
 
-        <section id="intro-to-diggy">
-        </section>
-
         <section id="grass">
         </section>
 
 
         <article id="ground">
 
+
+            <br><br>
             <img id="skeleton" src="img/skeleton.svg" alt="">
+            <img class="bubble" id="correct-bubble" src="img/correct_bubble.svg" alt="">
+            <img class="bubble" id="incorrect-bubble" src="img/incorrect_bubble.svg" alt="">
+
+            <div id="intro-to-skully">
+                <h2 id="intro-to-skully-1">This is Skully's quest. Will you help him get to the bottom of this?</h2>
+
+                <h3 id="intro-to-skully-2">Rules:</h3>
+                <div id="intro-to-skully-3">
+                    <h4>Every wrong answer will shrink the tunnel.</h4>
+                    <h4>Get to the bottom while keeping Skully alive.</h4>
+                </div>
+
+                <a href="#soil1" id="intro-to-skully-4">
+                    <div>
+                        <img src="img/icons/scroll.svg" alt="">
+                        <p>Ready? GO!</p>
+                    </div>
+                </a>
+            </div>
+
+
+            <br><br>
+            <img id="drill" src="img/drill.svg" alt="">
+            <br><br>
+
+            <h2 id="scroll-up">▲</h2>
+            <h2 id="scroll-down">▼</h2>
+
+
 
             <section id="soil1">
                 <img class="tunnel" src="img/tunnel.svg" alt="">
                 <div class="content">
                     <div class="quiz to-animate-in">
-                        <h2>question here 1</h2>
+                        <!-- question 1 -->
+                        <h2>As a result of the negotiations in 1974, where did the cemetery move to?</h2>
                         <div>
-                            <button class="option" data-soil="soil1">option 1</button>
-                            <button class="option" data-soil="soil1">option 2</button>
+                            <button class="option button secondary" data-right-or-wrong="incorrect"
+                                data-soil="soil1">Lakewoods Park
+                                Lookout</button>
+                            <button class="option button secondary" data-right-or-wrong="correct"
+                                data-soil="soil1">Bonnie Brae
+                                Point</button>
                         </div>
                     </div>
 
                     <div class="information hide">
-                        <p>information here</p>
+                        <p>afdsfsd</p>
                     </div>
                 </div>
-                
+
 
             </section>
 
@@ -63,10 +95,14 @@
                 <img class="tunnel" src="img/tunnel_continue.svg" alt="">
                 <div class="content">
                     <div class="quiz to-animate-in">
-                        <h2>question here</h2>
+                        <!-- question 2 -->
+                        <h2>Can you name one of the families that is buried in the graveyard who was among the first
+                            European settlers in Oshawa? </h2>
                         <div>
-                            <button class="option" data-soil="soil2">option 1</button>
-                            <button class="option" data-soil="soil2">option 2</button>
+                            <button class="option button secondary" data-right-or-wrong="correct"
+                                data-soil="soil2">Henry, Robinson and Guy families</button>
+                            <button class="option button secondary" data-right-or-wrong="incorrect"
+                                data-soil="soil2">Benjamin Wilson</button>
                         </div>
                     </div>
 
@@ -80,13 +116,16 @@
                 <img class="tunnel" src="img/tunnel_continue.svg" alt="">
                 <div class="content">
                     <div class="quiz to-animate-in">
-                        <h2>question here</h2>
+                        <!-- question 3 -->
+                        <h2>Who was the first settler of European Heritage in Oshawa?</h2>
                         <div>
-                            <button class="option" data-soil="soil3">option 1</button>
-                            <button class="option" data-soil="soil3">option 2</button>
+                            <button class="option button secondary" data-right-or-wrong="incorrect"
+                                data-soil="soil3">Cornelius Robinson</button>
+                            <button class="option button secondary" data-right-or-wrong="correct"
+                                data-soil="soil3">Benjamin Wilson</button>
                         </div>
                     </div>
-                    
+
                     <div class="information hide">
                         <p>information here</p>
                     </div>
@@ -97,10 +136,13 @@
                 <img class="tunnel" src="img/tunnel_continue.svg" alt="">
                 <div class="content">
                     <div class="quiz to-animate-in">
-                        <h2>question here</h2>
+                        <!-- question 4 -->
+                        <h2>According to the grave makers, who was the first burial in that graveyard?</h2>
                         <div>
-                            <button class="option" data-soil="soil4">option 1</button>
-                            <button class="option" data-soil="soil4">option 2</button>
+                            <button class="option button secondary" data-right-or-wrong="incorrect"
+                            data-soil="soil4">Thomas Guy Sr.</button>
+                            <button class="option button secondary" data-right-or-wrong="correct"
+                            data-soil="soil4">Nancy Henry</button>
                         </div>
                     </div>
 
@@ -114,10 +156,14 @@
                 <img class="tunnel" src="img/tunnel_continue.svg" alt="">
                 <div class="content">
                     <div class="quiz to-animate-in">
-                        <h2>question here</h2>
+                        <!-- question 5 -->
+                        <h2>Who has a memorial stone placed in the Pioneer Cemetery after it was found that their
+                            original stone was missing?</h2>
                         <div>
-                            <button class="option" data-soil="soil5">option 1</button>
-                            <button class="option" data-soil="soil5">option 2</button>
+                            <button class="option button secondary" data-right-or-wrong="correct"
+                                data-soil="soil5">Benjamin Wilson</button>
+                            <button class="option button secondary" data-right-or-wrong="incorrect"
+                                data-soil="soil5">option 2</button>
                         </div>
                     </div>
 
@@ -131,10 +177,13 @@
                 <img class="tunnel" src="img/tunnel_continue.svg" alt="">
                 <div class="content">
                     <div class="quiz to-animate-in">
-                        <h2>question here</h2>
+                        <!-- question 6 -->
+                        <h2>What's the oldest graveyard in Oshawa?</h2>
                         <div>
-                            <button class="option" data-soil="soil6">option 1</button>
-                            <button class="option" data-soil="soil6">option 2</button>
+                            <button class="option button secondary" data-right-or-wrong="correct" data-soil="soil6">The
+                                Harbor Pioneer Cemetery</button>
+                            <button class="option button secondary" data-right-or-wrong="correct" data-soil="soil6">The
+                                Harbor Pioneer Cemetery</button>
                         </div>
                     </div>
 

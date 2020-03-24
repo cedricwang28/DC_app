@@ -114,5 +114,5 @@ function draw(){
         
         window.location.replace("../index.html");
     
-    },true);
+    },false);
 }
