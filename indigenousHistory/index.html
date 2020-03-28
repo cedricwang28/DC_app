@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>A-Frame New</title>
+  <title>Lakeview Park</title>
   <meta name="description" content="Hello, World! - A-Frame">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
@@ -24,8 +24,22 @@
 </head>
 
 <body>
+  <!-- close app button -->
   <p id="closeVR">Close</p>
+  <!-- ------- FIXED ELEMENTS ------- -->
+  <nav>
+    <div class="nav-line">
+      <p id="camera1-btn" class="cam-toggle">Hunting Grounds</p>
+      <p id="camera2-btn" class="cam-toggle">Farmland</p>
+    </div>
+    <div class="nav-line">
+      <p id="camera3-btn" class="cam-toggle">Park Recreation</p>
+      <p id="camera4-btn" class="cam-toggle">Modern Day</p>
+    </div>
+  </nav>
+
   <a-scene vr-mode-ui="enabled: false;">
+    <!-- vr-mode-ui="enabled:false" removes the vr option that appears at the bottom corner of the application -->
     <a-assets>
       <!-- lights -->
       <a-mixin id="light" geometry="primitive: sphere; radius: 1.5" material="color: #FFF; shader: flat"
@@ -34,38 +48,39 @@
       <!-- FONTS -->
       <a-asset-item id="optimerBoldFont"
         src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+
       <!-- IMAGES ---------- -->
-      <img id="my-image" src="./trial/images/img012.jpg">
+      <!-- --- first nations -->
+      <img id="first-nations-1" src="./assets/img/images/first-nations/img012.jpg">
+      <img id="first-nations-2" src="./assets/img/images/first-nations/img008.jpg">
+
+
+      <!-- Textures---------- -->
+      <img id="grass" src="./assets/img/images/textures/grass.jpg">
+      <img id="pavement" src="./assets/img/images/textures/pavement.jpg">
+
 
       <!-- 3D ASSETS---------- -->
-      <!-- elf character -->
-      <a-asset-item id="cityModel" src="./trial/person/person.gltf"></a-asset-item>
-      <!-- animated dog -->
-      <a-asset-item id="animatedPetModel" src="./trial/dog/scene.gltf"></a-asset-item>
-      <a-asset-item id="treeGLTF" src="./trial/tree/maya-tree.glb"></a-asset-item>
-      <a-asset-item id="fishy" src="./trial/fish/cod.glb"></a-asset-item>
-      <!-- <a-asset-item id="tree" src="./trial/tree-05-0bj/tree-05.fbx"></a-asset-item> -->
+      <!-- --- elf character -->
+      <a-asset-item id="cityModel" src="./assets/img/person/person.gltf"></a-asset-item>
+      <!-- --- animated dog -->
+      <a-asset-item id="animatedPetModel" src="./assets/img/dog/scene.gltf"></a-asset-item>
+      <!-- --- tree -->
+      <a-asset-item id="treeGLTF" src="./assets/img/tree/maya-tree.glb"></a-asset-item>
+      <!-- --- fish -->
+      <a-asset-item id="fishy" src="./assets/img/fish/cod.glb"></a-asset-item>
 
-
-
-      <!-- <a-asset-item id="tree-obj" src="./trial/tree/tree_from_Maya.obj"></a-asset-item> -->
     </a-assets>
 
 
-    <!-- <a-entity obj-model="obj: url(./trial/tree-05-obj/tree-05.obj); mtl: url(./trial/tree-05-obj/tree-05.mtl)"
-      scale="1 1 1" position="-10 0.3 9"></a-entity>
- -->
 
-
-    <!-- ------- FIXED ELEMENTS ------- -->
-    <nav>
-      <h1 id="camera1-btn">Camera 1</h1>
-      <h2 id="camera2-btn">Camera 2</h2>
-      <h3 id="camera3-btn">Camera 3</h3>
-      <h4 id="camera4-btn">Camera 4</h4>
-    </nav>
     <!-- ------ CAMERAS -------- -->
     <a-entity id="rig">
+      <!-- <a-camera id="camera" camera look-controls position="-100 12 3">
+        <a-cursor position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.030; radiusInner: 0.020;"
+          material="color: #11d8c4; shader: flat" fuse="true" timeout="10">
+        </a-cursor>
+      </a-camera> -->
       <a-camera id="camera" camera look-controls position="-100 3 3">
         <a-cursor position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.030; radiusInner: 0.020;"
           material="color: #11d8c4; shader: flat" fuse="true" timeout="10">
@@ -88,40 +103,31 @@
       </a-camera>
     </a-entity>
 
+
+    <!-- CAMERA WITH ANIMATING CRUSER ON FUSE WITH ANY OBJECT -->
     <!-- <a-entity position="0 3.2 0"> -->
-    <a-entity camera="active:true" look-controls wasd-controls position="0 3.2 0">
-      <!-- <a-entity position="0 0 -3"
-                    geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;"
-                    material="color: cyan; shader: flat"
-                    cursor="maxDistance: 2; fuse: true"
-                    >                   
-          <a-animation begin="click" easing="ease-in" attribute="scale"
-            fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
-          <a-animation begin="fusing" easing="ease-in" attribute="scale"
-            fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
-        </a-entity> -->
+    <!-- <a-entity camera="active:true" look-controls wasd-controls position="0 3.2 0">
       <a-entity
         animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
         animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
         animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
         cursor="fuse: true;" material="color: black; shader: flat" position="0 0 -2.5"
         geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06">
-      </a-entity>
-      <!-- </a-entity> -->
-    </a-entity>
+      </a-entity> -->
+    <!-- </a-entity> -->
+    <!-- </a-entity> -->
 
-    <a-entity id="player" collider-check>
 
+    <!-- TRIAL CODE FOR RAYCASTING ANIMATION CHECKS -->
+    <!-- <a-entity id="player" collider-check>
       <a-entity raycaster="objects: .collidable" position="0 -0.9 0" rotation="90 0 0"></a-entity>
-
       <a-entity id="greenBox" class="collidable" position="-23 0.5 -3">
         <a-box position="0 0.5 -3" crusor-listener rotation="0 5 0" color="green" width="5" height="5" depth="5">
           <a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="2000" fill="backwards">
           </a-animation>
         </a-box>
       </a-entity>
-
-    </a-entity>
+    </a-entity> -->
 
 
 
@@ -130,32 +136,43 @@
     <a-entity position="-100 0.5 3">
       <a-entity geometry="primitive: circle; radius: 8" rotation="-90 0 0" position="0 0 0" material="color: grey">
       </a-entity>
+      <a-entity gltf-model="#fishy" scale="2 2 2" position="-2 1 -3" rotation="0 0 0"></a-entity>
+      <a-entity gltf-model="#treeGLTF" scale="0.5 0.5 0.5" position="-7 1 -4" rotation="0 -86 0"></a-entity>
+      <!-- image -->
+      <a-curvedimage src="#first-nations-1" height="2.0" radius="3.5" theta-length="72" position="-1.5 2.5 -0.5"
+        rotation="0 30 0" scale="2 2 2"></a-curvedimage>
+      <a-curvedimage src="#first-nations-2" height="2.0" radius="3.5" theta-length="72" position="0.5 2.5 0.5"
+        rotation="0 -110 0" scale="2 2 2"></a-curvedimage>
+      <a-text color="brown" width="10" rotation="0 0 0" position="-3.5 5 -5"
+        font="https://cdn.aframe.io/fonts/mozillavr.fnt" value="Hunting Grounds and Fishing Ground"></a-text>
+      <a-text color="brown" width="2" rotation="0 -48 0" position="2.5 3 -4" wrap-count="25" letter-spacing="5"
+        line-height="120" font="https://cdn.aframe.io/fonts/mozillavr.fnt"
+        value="This area of Oshawa was an important carrying route for First Nations. The Oshawa Creek was much larger than it is today and groups would congregate here every spring and fall to fish.">
+      </a-text>
+      <a-text color="brown" width="2" rotation="0 -180 0" position="0.5 3 3" wrap-count="25" letter-spacing="5"
+        line-height="120" font="https://cdn.aframe.io/fonts/mozillavr.fnt"
+        value="The trail can best be described as an inverted “Y”. From Lake Ontario, one branch went northward by Harmony Creek and the other by the Oshawa Creek.">
+      </a-text>
     </a-entity>
 
     <!-- placeholder 1 -->
-    <a-box position="-43 0.5 -3" crusor-listener rotation="0 5 0" color="#4CC3D9" width="10" height="10" depth="10">
-    </a-box>
-    <a-entity gltf-model="#treeGLTF" scale="0.5 0.5 0.5" position="3 1 -3" rotation="0 0 0"></a-entity>
-    <a-entity gltf-model="#fishy" scale="2 2 2" position="-2 1 -3" rotation="0 0 0"></a-entity>
 
 
     <!-- TIME 2 -->
     <a-entity position="0 0.5 0">
-      <a-entity geometry="primitive: circle; radius: 6" rotation="-90 0 0" position="0 0 0" material="color: grey">
-      </a-entity>
+      <a-entity geometry="primitive: circle; radius: 6" rotation="-90 0 0" position="0 0 0" material="color: grey"></a-entity>
+      <a-entity gltf-model="#fishy" scale="2 2 2" position="-2 1 -3" rotation="0 0 0"></a-entity>
       <!-- elf character -->
       <a-entity gltf-model="#cityModel" scale="1.5 1.5 1.5" position="0 1 -3" rotation="0 0 0"></a-entity>
       <!-- animated dog -->
       <a-entity gltf-model="#animatedPetModel" scale="0.02 0.02 0.02" position="-5 1 2" rotation="0 -25 0"
         animation-mixer></a-entity>
       <!-- image -->
-      <a-curvedimage src="#my-image" height="2.0" radius="3.5" theta-length="72" position="-1.5 2.5 -0.5"
+      <a-curvedimage src="#first-nations-1" height="2.0" radius="3.5" theta-length="72" position="-1.5 2.5 -0.5"
         rotation="0 30 0" scale="2 2 2"></a-curvedimage>
       <!-- TEXT -->
       <a-text color="brown" width="10" rotation="25 -5 5" position="0 5 -5"
         font="https://cdn.aframe.io/fonts/mozillavr.fnt" value="Indigenous History"></a-text>
-
-
     </a-entity>
 
     <!-- TIME 3 -->
@@ -180,15 +197,19 @@
     <!-- ENVIRONMENT -->
     <a-entity position="0 0 0">
       <!-- sidewalk / path -->
-      <a-plane position="140 0.03 -39" rotation="-90 12 0" width="350" height="25" color="#ECECEC"></a-plane>
+      <a-plane position="140 0.03 -39" rotation="-90 12 0" width="350" height="25" color="#ECECEC"
+        material="src: #pavement; repeat:11 1"></a-plane>
       <!-- angled back-->
-      <a-plane position="140 0.03 35" rotation="-90 -12 0" width="350" height="25" color="#ECECEC"></a-plane>
+      <a-plane position="140 0.03 35" rotation="-90 -12 0" width="350" height="25" color="#ECECEC"
+        material="src: #pavement; repeat:11 1"></a-plane>
       <!-- angled forward-->
-      <a-plane position="-250 0.03 -4" rotation="-90 0 0" width="500" height="30" color="#ECECEC"></a-plane>
+      <a-plane position="-250 0.03 -4" rotation="-90 0 0" width="500" height="30" color="#ECECEC"
+        material="src: #pavement; repeat:11 1"></a-plane>
     </a-entity>
 
     <!-- green pasture -->
-    <a-plane position="0 -1 0" rotation="-90 0 0" width="800" height="800" color="#7BC8A4"></a-plane>
+    <a-plane position="0 -1 0" rotation="-90 0 0" width="800" height="800" color="#7BC8A4"
+      material="src: #grass; repeat:100 50"></a-plane>
     <!-- sky -->
     <a-sky color="#ADE8F0"></a-sky>
 
