@@ -915,6 +915,11 @@ function initMap() {
         window.location.replace("./buffalo/index.html");
     });
 
+    pierIcon.addListener('click', function() {
+        
+        window.location.replace("./harbour/index.html");
+    });
+
 
 
 

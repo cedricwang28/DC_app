@@ -4,6 +4,15 @@
 	padding: 0;
 }
 
+.close_icon{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 2vw;
+	top: 2vh;
+	z-index: 100;
+}
+
 body {
 	font-family: sans-serif;
 	color: whitesmoke;
