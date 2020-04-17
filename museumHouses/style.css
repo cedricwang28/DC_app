@@ -52,6 +52,7 @@ button{
     max-height: 100px;
     border: 10px rgb(255, 255, 255);
     border-style: inset;
+    margin: 10px;
 }
 
 nav a{
@@ -141,7 +142,6 @@ nav{
 }
 
 #section1 h1,h2,h3,h4{
-    margin: 1em;
     letter-spacing: 1px;
 }
 
@@ -214,16 +214,15 @@ nav{
 }
 
 #section2H1, #section2h4, #section2p{
-    opacity: 0;
+    opacity: 1;
 }
 
 #section2h4{
     position: relative;
-    top: -5px;
 }
 
 #section2HenryImage{
-    opacity: 0;
+    opacity: 1;
     margin-top: 10px;
 }
 
@@ -271,7 +270,6 @@ nav{
 #section2Head{
     height: 30vh;
     position: relative;
-    top: -50px;
 }
 
 .historyIcon{
@@ -282,7 +280,8 @@ nav{
     height: 40vh;
     overflow-y: scroll;
     position: relative;
-    top: -20px;
+    top: 0;
+    margin-top: 0;
     border-radius: 5px;
     scroll-behavior: smooth;
     opacity: 0;
@@ -331,8 +330,28 @@ nav{
 
 #section3{
     height: 100vh;
-    background-color: #210606;
+    background-image: url(./images/section3bg.jpg);
+    background-size: cover;
     color: #ffffff;
+}
+
+#section3Head{
+    height: 30vh;
+    position: relative;
+}
+
+/* ------------- Section 4 ------------- */
+
+#section4{
+    height: 100vh;
+    background-image: url(./images/section4bg.jpg);
+    background-size: cover;
+    color: #ffffff;
+}
+
+#section4Head{
+    height: 30vh;
+    position: relative;
 }
 
 .close_icon{
@@ -340,7 +359,7 @@ nav{
     width: 30px;
     height: 30px;
     left: 1.5vw;
-    top: 2vh;
+    top: 5vh;
     cursor: pointer;
     opacity: 0;
 }
