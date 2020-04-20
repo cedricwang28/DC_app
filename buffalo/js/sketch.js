@@ -7,7 +7,7 @@ let obstacles = [];
 //Current Score
 let score = 0;
 //Background1 x position
-let bgX1 = 0;
+let bgX1 = -200;
 //Scroll Speed for background
 let scrollSpeed = 2;
 //X position for background 2
@@ -18,7 +18,7 @@ let buffaloIMG,backgroundIMG,boxIMG,runnerIMG,boxBreakIMG;
 
 //preload images
 function preload(){
-    backgroundIMG = loadImage('./img/background_placeholder.png');
+    backgroundIMG = loadImage('./img/background.gif');
     boxIMG = loadImage('./img/barrel_placeholder.png');
     boxBreakIMG = loadImage('./img/barrel_placeholder.gif')
     buffaloIMG = loadImage('./img/buffalo_placeholder.gif');
@@ -31,7 +31,7 @@ function setup(){
     players.push(new Player(120,height/2-50));
     buffalo.push(new Buffalo(0,height/2-25));
     //move the second background to the right edge of the screen
-    bgX2 = width;
+    bgX2 = width+40;
 }
 
 //on touch jump, or restart if lost
@@ -50,9 +50,10 @@ function touchStarted(){
 function draw(){
     //draw background base
     background(0);
-    // draw two background images
-    image(backgroundIMG, bgX1, 0, width, height);
-    image(backgroundIMG, bgX2, 0, width, height);
+    // draw background image
+    image(backgroundIMG, bgX1, 0, 600, 400);
+    image(backgroundIMG, bgX2, 0, 600, 400);
+
     //draw black rectangle over bottom half of the screen
     stroke(0);
     fill(0);
@@ -63,11 +64,11 @@ function draw(){
     bgX2 -= scrollSpeed;
 
     //if background images go past the screen, reset them back to the right most edge
-    if (bgX1 < -width){
-        bgX1 = width;
+    if (bgX1 < -width-240){
+        bgX1 = width+40;
     }
-    if (bgX2 < -width){
-        bgX2 = width;
+    if (bgX2 < -width-240){
+        bgX2 = width+40;
     }
   
 
