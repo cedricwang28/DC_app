@@ -359,7 +359,7 @@ nav{
     width: 30px;
     height: 30px;
     left: 1.5vw;
-    top: 5vh;
+    top: 3vh;
     cursor: pointer;
-    opacity: 0;
+    z-index: 1000;
 }

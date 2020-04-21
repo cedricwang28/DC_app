@@ -20,3 +20,9 @@ camera4Tag.addEventListener("click", () => {
     console.log("clicked camera 4 tag");
     camera4.setAttribute('camera', 'active', true);
 })
+
+
+document.querySelector("#closeVR").addEventListener("click",function(){
+        
+    window.location.replace("../index.html");
+});

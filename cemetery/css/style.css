@@ -174,7 +174,7 @@ main {
 #scroll-up {
     font-size: 3rem;
     color: white;
-    position: sticky;
+    /* position: sticky; */
     margin-right: 65vw;
     z-index: 101;
     cursor: pointer;
@@ -194,6 +194,7 @@ main {
 /* skeleton */
 #skeleton {
     position: sticky;
+    position: -webkit-sticky;
     height: 27vh;
     margin-right: 67vw;
     top: 35vh;
@@ -212,6 +213,7 @@ main {
 
 #drill {
     position: sticky;
+    position: -webkit-sticky;
     height: 40vh;
     margin-right: 65vw;
     top: 30vh;

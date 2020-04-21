@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.scroller{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.start{
+    left: 0;
+}
+
+
+/* switch buttons */
+#middleRight{
+    top: 50vh;
+    right: 0px;
+}
+
+#middleLeft{
+    top: 50vh;
+    left: 0px;
+}
+
+.cottage{
+    position: fixed;
+    top: 40vh;
+    left: 150vw;
+    z-index: 0;
+}
+
+#instructions{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 150px;
+    position: fixed;
+    top: 40vh;
+    left: 0;
+    background: black;
+    color: white;
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+#theCanvas{
+    position: fixed;
+    right: -100vw;
+    z-index: 1000;
+}
+
+.close_icon{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 1.5vw;
+    top: 3vh;
+    cursor: pointer;
+    z-index: 1000;
+}

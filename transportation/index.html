@@ -11,14 +11,15 @@
     <img src="./img/close_icon.png" alt="close" class="close_icon">
 
     <section id="splashPage">
-        <h1>splash video</h1>
-        <p>please turn your device to landscape mode</p>
-        <button id="skip">Skip To The Journey ↓</button>
+        <video controls autoplay>
+            <source src="./img/OshawaStreetcar_1.webm" 
+                type='video/webm;codecs="vp8, vorbis"'/>
+        </video>
+        <p>Please turn your device to landscape mode</p>
+        <button id="skip">Skip Video ↓</button>
     </section>
     <section id="landingPage">
-        <!-- <div class="carsvg">
-            <img src="./img/platform.svg" alt="streetCar">
-        </div> -->
+        <object id="theObject" data="./img/car.svg" type="image/svg+xml"></object>
         <button id="hopin">HOP IN</button>
     </section>
     <section id="sliderPage">
@@ -29,8 +30,8 @@
             </div> -->
             <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:490px;overflow:hidden;">
                 <div data-p="735">
-                    <img data-u="image" src="img/File1806-A992.1.17.5-A994.28.9b-A994.28.10b.jpg" />
-                    <img data-t="0" style="left:0px;top:0px;width:980px;height:490px;position:absolute;opacity:0;max-width:980px;" src="img/File1806-A992.1.17.5-A994.28.9b-A994.28.10b.jpg" />
+                    <img data-u="image" src="img/workers.jpg" />
+                    <img data-t="0" style="left:0px;top:0px;width:980px;height:490px;position:absolute;opacity:0;max-width:980px;" src="img/workers.jpg" />
                     
                     <div style="left:88px;top:189px;width:275px;height:345px;position:absolute;">
                         <svg viewbox="0 0 250 319" width="250" height="319" style="left:0px;top:0px;display:block;position:absolute;overflow:visible;">
@@ -50,9 +51,9 @@
 
                     <svg viewbox="0 0 980 490" data-ts="preserve-3d" width="980" height="490" data-tchd="jssor_1_msk_2" style="left:0px;top:0px;display:block;position:absolute;overflow:visible;">
                         <g>
-                            <text data-to="530px 135px" fill="white" x="730" y="300" data-t="14" style="position:absolute;opacity:0;font-size:40px;letter-spacing:0.02em;overflow:visible;">car #12
+                            <text data-to="530px 135px" fill="white" x="430" y="50" data-t="14" style="position:absolute;opacity:0;font-size:40px;letter-spacing:0.02em;overflow:visible;">Workers Stringing The Cables
                             </text>
-                            <text fill="white" x="660" y="430" data-t="15" style="position:absolute;opacity:0;font-size:35px;letter-spacing:1em;overflow:visible;"> The first official trip
+                            <text fill="white" x="560" y="200" data-t="15" style="position:absolute;opacity:0;font-size:40px;letter-spacing:1em;overflow:visible;">For The Streetcars
                             </text>
                         </g>
                     </svg>
@@ -87,9 +88,9 @@
                     </div>
                     <svg viewbox="0 0 980 490" data-ts="preserve-3d" width="980" height="490" data-tchd="jssor_1_msk_2" style="left:0px;top:0px;display:block;position:absolute;overflow:visible;">
                         <g>
-                            <text data-to="530px 135px" fill="white" x="530" y="100" data-t="14" style="position:absolute;opacity:0;font-size:40px;letter-spacing:0.02em;overflow:visible;">June 1921 Simcoe St
+                            <text data-to="530px 135px" fill="white" x="530" y="100" data-t="14" style="position:absolute;opacity:0;font-size:40px;letter-spacing:0.02em;overflow:visible;">1921 Simcoe St S
                             </text>
-                            <text fill="white" x="420" y="200" data-t="15" style="position:absolute;opacity:0;font-size:35px;letter-spacing:1em;overflow:visible;">Frequent streetcar service after W.W.I
+                            <text fill="white" x="420" y="200" data-t="15" style="position:absolute;opacity:0;font-size:35px;letter-spacing:1em;overflow:visible;">Trip From Downtown To The Lake
                             </text>
                         </g>
                     </svg>
@@ -131,7 +132,7 @@
                             <g fill="#fff7eb">
                                 <path id="jssor_1_pt_3" fill="none" d="M26,3C117,6 357.3,17.16 359.71,106.97C361.31,166.58 304.83,211.11 270,230"></path>
                                 <text x="0">
-                                    <textPath href="#jssor_1_pt_3" startoffset="100%" data-t="20">1932 June
+                                    <textPath href="#jssor_1_pt_3" startoffset="100%" data-t="20">1932 South of Bloor Street
                                     </textPath>
                                 </text>
                             </g>
@@ -140,7 +141,7 @@
                             <g fill="#fff7eb">
                                 <path id="jssor_1_pt_4" fill="none" d="M27,48C114,48 319.98,53.14 321.71,115.97C322.78,154.56 281.83,171.11 247,190"></path>
                                 <text x="0">
-                                    <textPath href="#jssor_1_pt_4" startoffset="100%" data-t="22">Underpass constructed
+                                    <textPath href="#jssor_1_pt_4" startoffset="100%" data-t="22">Underpass Constructed
                                     </textPath>
                                 </text>
                             </g>
@@ -148,13 +149,21 @@
                     </div>
                 </div>
                 <div data-p="735">
-                    <img data-u="image" src="img/A019_17_214.jpg" />
-                    <div style="left:88px;top:189px;width:275px;height:345px;position:absolute;">
-                        <!-- <svg viewbox="0 0 250 319" width="250" height="319" style="left:0px;top:0px;display:block;position:absolute;overflow:visible;">
-                            <path stroke-dasharray="760,2000" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" d="M117.5,326.07C116.71,308.15 122.23,305.43 117.5,286.08C112.77,266.72 99.35,243.78 103.3,233.03C107.24,222.28 110.14,220.1 111.03,208.66C111.62,200.86 110.1,196.15 104.81,192.27C100.45,189.08 92.55,188.58 81.04,196.91C73.76,202.16 77.46,209.3 68.59,213.68C59.56,218.13 22.88,150.77 27.62,145.74C38.08,134.64 66.63,187.64 71.36,164.7C76.1,141.76 93.56,145.51 97.51,131.89C101.46,118.27 11.53,140.02 7.77,112.21C3.92,83.78 96.24,52.21 107.21,44.62C123.12,33.6 57.8,35.27 63.32,25.95C66.77,20.14 101.92-0.05 127.34,6.63C142.69,10.67 146.11,40.81 160.66,43.51C199.31,50.67 235.48,9.28 233.28,36.8C231.93,53.69 177.73,85.35 191.46,93.08C201.84,98.92 214.94,90.84 227.13,97.55C240.98,105.15 196.32,123.29 212.01,135.3C223.99,144.47 250.71,177.67 240.28,184.88C230.89,191.36 222.26,165.6 215.14,169.86C204.92,175.98 201.89,178.55 203.47,189.3C205.05,200.06 233.34,212.08 227.92,228.73C224.82,238.31 213.73,251.67 203.47,255.25C193.22,258.84 169.55,258.12 158.51,253.82C147.47,249.52 141.16,238.05 133.27,240.92C125.38,243.78 112.45,265.72 115.99,280.77" data-t="16"></path>
-                        </svg> -->
+                    <img data-u="image" src="img/railway office.jpg"/>
+                    <!-- <div style="left:88px;top:189px;width:275px;height:345px;position:absolute;">
+                        <svg viewbox="0 0 250 319" width="250" height="319" style="left:0px;top:0px;display:block;position:absolute;overflow:visible;">
+                            <path stroke-dasharray="760,2000" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" d="M18,21.912C18,19.752 19.752,18 21.912,18C24.072,18 25.824,19.752 25.824,21.912C25.824,24.072 24.072,25.824 21.912,25.824C19.752,25.824 18,24.072 18,21.912Z" data-t="16"></path>
+                        </svg>
+                    </div> -->
 
-                    </div>
+                    <svg viewbox="0 0 980 490" data-ts="preserve-3d" width="980" height="490" data-tchd="jssor_1_msk_2" style="left:0px;top:0px;display:block;position:absolute;overflow:visible;">
+                        <g>
+                            <text data-to="530px 135px" fill="white" x="430" y="30" data-t="14" style="position:absolute;opacity:0;font-size:40px;letter-spacing:0.02em;overflow:visible;">Summer 39 Simcoe St S
+                            </text>
+                            <text fill="white" x="220" y="150" data-t="15" style="position:absolute;opacity:0;font-size:35px;letter-spacing:1em;overflow:visible;">Streetcar In Front Of The Oshawa Railway Offices
+                            </text>
+                        </g>
+                    </svg>
                     <!-- <svg viewbox="0 0 590 280" data-ts="preserve-3d" width="590" height="280" data-tchd="jssor_1_msk_8" style="left:90px;top:17px;display:block;position:absolute;overflow:visible;">
                         <g>
                             <svg viewbox="0 0 472 100" x="70" y="13" width="472" height="100" style="position:absolute;font-size:40px;overflow:visible;">
@@ -202,9 +211,11 @@
             </div>
         </div>
     </section>
-    <script src="./js/main.js"></script>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery.easing.1.3.js"></script>
     <script src="./js/jssor.slider-28.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 </html>

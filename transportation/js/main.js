@@ -1,12 +1,19 @@
 window.onload = function(){
     const skip = document.querySelector('#skip');
     const scrollHeight = $("section").innerHeight();
-
     const scrollHeight2 = ($("section").innerHeight())*2;
     const hopin = document.querySelector('#hopin');
-
-    // when refresh the page, the window always starts at the top
-    $("body, html").animate({scrollTop: 0}, 500, "easeOutExpo");
+    let myObj =  document.getElementById('theObject').contentDocument;
+    let myCar =  myObj.getElementById('streetcar');
+    let thePath = [
+        {
+            x:0,
+            y:0
+        },{
+            x:-950,
+            y:-530
+        }
+    ];
 
     // clicking on the skip will scroll down the window
     skip.addEventListener('click', function(){
@@ -15,9 +22,27 @@ window.onload = function(){
     });
 
     // clicking on the hop in will scroll down the window
-    hopin.addEventListener('click', function(){
+    hopin.addEventListener('click', e=> {
         
-        $("body, html").animate({scrollTop: scrollHeight2}, 500, "easeOutExpo");
+        TweenMax.to(myCar,5,{
+            bezier:{
+                type:"thru",
+                values:thePath
+            },
+            ease:Linear.easeNone,
+        });
+
+        TweenMax.to(myCar,5,{
+            css: {
+                scale: 0.5,
+            },
+            ease:Linear.easeNone,
+        });
+
+        $("body, html").delay(5000).animate({scrollTop: scrollHeight2}, 500, "easeOutExpo");
+        $("#hopin").fadeOut();
+
+        
     });
 
     // for the slider section
@@ -105,11 +130,12 @@ window.onload = function(){
 
 
 
+
+    // close button for the main map
     document.querySelector(".close_icon").addEventListener("click",function(){
         
         window.location.replace("../index.html");
     });
-
 
 
 

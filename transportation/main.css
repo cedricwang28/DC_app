@@ -3,19 +3,6 @@
     padding:0;
     box-sizing: border-box;
 }
-body{
-    position: relative;
-}
-.close_icon{
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    left: 2vw;
-    top: 2vh;
-}
-.close_icon:hover{
-    cursor: pointer;
-}
 
 section {
     width:100vw;
@@ -31,18 +18,30 @@ section {
     background-color: lightgrey;
 }
 
-#splashPage h1 {
-    font-family: 'Noto Sans';
-    font-size: 2em;
+video {
+    width:100vw;
+    height:100vh;
+    object-fit: cover;
+    position: absolute;
 }
 
-#splashPage button {
+#splashPage p {
+    position:absolute;
     font-family: 'Noto Sans';
-    background-color: #748C85;
-    padding:1em;
+    color:white;
+    top:10px;
+}
+#splashPage button {
+    position:absolute;
+    font-family: 'Noto Sans';
+    background-color: rgba(0,0,0,.4);
+    border:1px solid rgba(211,211,211,0.2);
+    padding:0.5em 1em;
     border-radius: 0.2rem;
     font-size:1em;
     color:white;
+    right:0;
+    top:70vh;
 }
 
 #splashPage button:hover {
@@ -55,20 +54,11 @@ section {
 
 /* landing page */
 #landingPage {
-    background: url(./img/Artboard\ 2.svg);
+    background: url(./img/station.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.carsvg {
-    width:100%;
-    height:auto;
-}
-
-.carsvg img{
-    width:100%;
-    height:auto;
-}
 
 #hopin {
     font-size:1.5em;
@@ -82,6 +72,17 @@ section {
     padding:0.5em;
     animation: scaling 1s infinite alternate ease-out;
 }
+
+.close_icon{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 1.5vw;
+    top: 3vh;
+    cursor: pointer;
+    z-index: 1000;
+}
+
 
 @keyframes scaling {
     from {
@@ -112,3 +113,6 @@ section {
     .jssora051:hover {opacity:.8;}
     .jssora051.jssora051dn {opacity:.5;}
     .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+
+
+
