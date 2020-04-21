@@ -920,11 +920,7 @@ function initMap() {
         window.location.replace("./harbour/index.html");
     });
 
-    cottage.addListener('click', function() {
-        
-        window.location.replace("./cottages/index.html");
-    });
-
+    
 
 
 
