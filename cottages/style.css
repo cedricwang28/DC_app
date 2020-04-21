@@ -73,3 +73,13 @@ p{
     right: -100vw;
     z-index: 1000;
 }
+
+.close_icon{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 1.5vw;
+    top: 3vh;
+    cursor: pointer;
+    z-index: 1000;
+}

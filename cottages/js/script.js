@@ -11,6 +11,14 @@
 */
 
 document.addEventListener('DOMContentLoaded', (e) => {
+
+    // close button for the main map
+    document.querySelector(".close_icon").addEventListener("click",function(){
+        
+        window.location.replace("../index.html");
+    });
+
+    
     //touch variables
     let initTouchX, moveTouchX;
 
