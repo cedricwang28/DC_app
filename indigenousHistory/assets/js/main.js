@@ -22,7 +22,7 @@ camera4Tag.addEventListener("click", () => {
 })
 
 
-document.querySelector(".close_icon").addEventListener("click",function(){
+document.querySelector("#closeVR").addEventListener("click",function(){
         
     window.location.replace("../index.html");
 });

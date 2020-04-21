@@ -16,8 +16,8 @@ p {
 #closeVR{
     z-index: 110;
     position: fixed;
-    top: 4%;
-    right:4%;
+    top: 3vh;
+    right:3%;
     width: 5vw;
     max-width: 30px;
     /* color: #301801; */

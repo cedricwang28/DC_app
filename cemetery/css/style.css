@@ -174,7 +174,7 @@ main {
 #scroll-up {
     font-size: 3rem;
     color: white;
-    position: sticky;
+    /* position: sticky; */
     margin-right: 65vw;
     z-index: 101;
     cursor: pointer;
