@@ -963,7 +963,7 @@ function initMap() {
                 
 
                 if(myPoint == undefined){
-                    map.setCenter(pos);
+                    // map.setCenter(pos);
                     myPoint = new google.maps.Marker({
                         position:pos,
                         map:map,
