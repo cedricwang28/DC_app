@@ -947,65 +947,65 @@ function initMap() {
 
 
 
-    // let pos = {};
+    let pos = {};
 
-    // if (navigator.geolocation) {
+    if (navigator.geolocation) {
 
-    //         navigator.geolocation.watchPosition(function(position) {
-    //             pos = {
-    //               lat: position.coords.latitude,
-    //               lng: position.coords.longitude
-    //             };
-    //             console.log(position);
+            navigator.geolocation.watchPosition(function(position) {
+                pos = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+                console.log(position);
 
 
-    //             // document.querySelector('.showheading').innerHTML = position.coords.heading;
+                // document.querySelector('.showheading').innerHTML = position.coords.heading;
                 
 
-    //             if(myPoint == undefined){
-    //                 map.setCenter(pos);
-    //                 myPoint = new google.maps.Marker({
-    //                     position:pos,
-    //                     map:map,
-    //                     icon:{path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-    //                         scale: 6,
-    //                         fillColor: "red",
-    //                         rotation: 90,
-    //                         scaledSize: new google.maps.Size(100, 100)
-    //                     }
-    //                 });
-    //             }else{
-    //                 myPoint.setPosition(pos);
-    //                 myPoint.setIcon({
-    //                     path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-    //                     scale: 6,
-    //                     rotation: position.coords.heading
-    //                   });
-    //             }
+                if(myPoint == undefined){
+                    map.setCenter(pos);
+                    myPoint = new google.maps.Marker({
+                        position:pos,
+                        map:map,
+                        icon:{path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                            scale: 6,
+                            fillColor: "red",
+                            rotation: 90,
+                            scaledSize: new google.maps.Size(100, 100)
+                        }
+                    });
+                }else{
+                    myPoint.setPosition(pos);
+                    myPoint.setIcon({
+                        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                        scale: 6,
+                        rotation: position.coords.heading
+                      });
+                }
 
 
 
-    //             // map.setCenter(pos);
+                // map.setCenter(pos);
 
-    //             // new google.maps.Marker({
-    //             //     position:{
-    //             //         lat:pos.lat,
-    //             //         lng:pos.lng
-    //             //     },
-    //             //     map:map
-    //             // });
-
-
-    //           }, function() {
-    //             handleLocationError(true, infoWindow, map.getCenter());
-    //           },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
+                // new google.maps.Marker({
+                //     position:{
+                //         lat:pos.lat,
+                //         lng:pos.lng
+                //     },
+                //     map:map
+                // });
 
 
+              }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+              },{enableHighAccuracy:true,timeout:60000,maximumAge:0});
 
-    //   }else {
 
-    //     handleLocationError(false, infoWindow, map.getCenter());
-    //   }
+
+      }else {
+
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
 
 
 }
